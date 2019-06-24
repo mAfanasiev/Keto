@@ -1,0 +1,40 @@
+.header {
+  padding-top: 46px;
+  &__content {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    &-text {
+      opacity: 0.5;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      margin-right: 13px;
+      cursor: pointer;
+    }
+    &-burger {
+      width: 34px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+    &-line {
+      display: block;
+      background-color: #ffffff;
+      width: 30px;
+      height: 2px;
+      &--middle {
+        margin-right: auto;
+      }
+    }
+  }
+}

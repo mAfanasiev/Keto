@@ -1,0 +1,29 @@
+.footer {
+  padding-bottom: 70px;
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__name {
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13px;
+    align-self: center;
+  }
+  &__logo {
+    align-self: baseline;
+    width: 107px;
+    display: block;
+    line-height: 0;
+  }
+  &__social {
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
