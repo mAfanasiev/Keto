@@ -8,7 +8,8 @@ body {
 	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: auto, auto, auto, auto, cover;
-	background-position:left -650px top -16px, right -473px top -282px, right -120px bottom -90px, right calc(50% + 37px) top -5px, center center;
+	background-position:left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
+	background-attachment: scroll, scroll, scroll, scroll, fixed;
 }
 
 body.result {
@@ -32,15 +33,15 @@ svg {
 }
 
 .wrapper {
-	width: 1220px;
+	width: 1170px;
 	margin: 0 auto;
-	padding: 0 25px;
-	@include r(1219) {
-		width: 1024px;
+	@include r(1230) {
+		width: 1030px;
 	}
-	@include r(1023) {
+	@include r(1070) {
 		width: 768px;
-		padding: 0 10px;
+		padding-right: 20px;
+		padding-left: 20px;
 	}
 	@include r(767) {
 		width: 640px;
@@ -49,7 +50,27 @@ svg {
 		width: 480px;
 	}
 	@include r(479) {
-		width: 100%;
+		width: 280px;
+	}
+}
+
+.wrapper--sm {
+	width: 1030px;
+	margin: 0 auto;
+
+	@include r(1070) {
+		width: 768px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	@include r(767) {
+		width: 640px;
+	}
+	@include r(639) {
+		width: 480px;
+	}
+	@include r(479) {
+		width: 280px;
 	}
 }
 
