@@ -1,0 +1,44 @@
+.main-button,
+.boy .main-button {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+  background-image: linear-gradient(
+    to left,
+    $boy-target-start,
+    $boy-target-end
+  );
+  text-decoration: none;
+  border-radius: 40px;
+
+  &--lg {
+    width: 398px;
+    height: 80px;
+    padding: 0 56px;
+    font-size: 28px;
+    line-height: 80px;
+  }
+
+  &--lg::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 1px);
+    right: 56px;
+    width: 43px;
+    height: 20px;
+    background-image: url("../img/main-button-arrow.svg");
+    transform: translateY(-50%);
+  }
+}
+
+.girl .main-button {
+  background-image: linear-gradient(
+    to left,
+    $girl-target-start,
+    $girl-target-end
+  );
+}

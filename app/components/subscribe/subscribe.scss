@@ -1,0 +1,214 @@
+.subscribe {
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.subscribe__popup {
+  position: relative;
+  width: 100%;
+  max-width: 1030px;
+  min-height: 530px;
+  margin: 183px auto 324px;
+  padding: 81px 0 0;
+  color: white;
+  background-color: transparentize(#2e3844, 0.4);
+  border-radius: 5px;
+}
+
+.subscribe__target {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+
+  & .half {
+    width: 99px;
+    height: 99px;
+  }
+
+  & .center {
+    position: relative;
+    width: 83px;
+    height: 83px;
+
+    &::after {
+      content: "";
+      display: block;
+      margin: auto;
+      width: 49px;
+      height: 42px;
+      background-image: url("../img/subscribe-email-icon.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 49px 32px;
+    }
+  }
+}
+
+.subscribe__body {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.subscribe__text {
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.subscribe__title {
+  margin-bottom: 14px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.subscribe__subtitle {
+  color: transparentize(white, 0.5);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: (26 / 20);
+}
+
+.subscribe__field {
+  position: relative;
+  margin-bottom: 31px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    width: 30px;
+    height: 20px;
+    background-image: url("../img/subscribe-email-icon.svg");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+}
+
+.subscribe__input {
+  width: 100%;
+  height: 60px;
+  padding: 0 80px;
+  color: white;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: $transparent;
+  border: 1px solid #545e6a;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: transparentize(white, 0.5);
+    font-weight: inherit;
+    transition: color 0.3s;
+  }
+
+  &:focus::placeholder {
+    color: $transparent;
+  }
+}
+
+.subscribe__agreement {
+  margin-bottom: 43px;
+  padding: 0 32px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: (26 / 18);
+}
+
+.subscribe__label {
+  display: flex;
+  cursor: pointer;
+}
+
+.subscribe__check {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #545e6a;
+  border-radius: 4px;
+}
+
+.subscribe__checkbox:checked + .subscribe__check {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.subscribe__checkbox:checked + .subscribe__check,
+.boy .subscribe__checkbox:checked + .subscribe__check {
+  background-image: 
+    url("../img/check.png"),
+    linear-gradient(
+      to right, $boy-target-start, $boy-target-end
+    );
+}
+
+.girl .subscribe__checkbox:checked + .subscribe__check {
+  background-image:
+    url("../img/check.png"),
+    linear-gradient(
+      to right, $girl-target-start, $girl-target-end
+    );
+}
+
+.subscribe__label-description {
+  margin-top: 4px;
+  margin-left: 21px;
+}
+
+.boy .subscribe__agreement-link {
+  padding-left: 50px;
+  color: #f55064;
+}
+
+.boy .subscribe__agreement-link:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #f55064;
+}
+
+.subscribe__button {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 54px;
+  color: white;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  background-image: linear-gradient(
+    to right, $boy-target-start, $boy-target-end
+  );
+  border-radius: 30px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 23px;
+    height: 20px;
+    margin-left: 15px;
+    background-image: url("../img/main-button-arrow-02.svg");
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+.girl .subscribe__button {
+  background-image: linear-gradient(
+    to right, $girl-target-start, $girl-target-end
+  );
+}

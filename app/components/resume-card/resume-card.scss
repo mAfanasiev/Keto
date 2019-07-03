@@ -1,0 +1,382 @@
+.resume-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 450px;
+  margin: 15px 0;
+  padding: 0 19px;
+  color: white;
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+  background-color: transparentize(#2e3844, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.resume-card__about-show {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  right: 25px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 25px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #545e6a;
+  cursor: pointer;
+  transition: inherit;
+}
+
+.resume-card--about .resume-card__about-show {
+  background-color: #2ccda4;
+}
+
+.resume-card__about {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 14px;
+  line-height: (24 / 14);
+  text-align: center;
+  opacity: 0;
+  transition: inherit;
+}
+
+.resume-card--about .resume-card__about {
+  z-index: 1;
+  opacity: 1;
+}
+
+.resume-card__main {
+  transition: inherit;
+}
+
+.resume-card--about .resume-card__main {
+  opacity: 0;
+}
+
+.resume-card__top {
+  padding-top: 34px;
+  padding-left: 9px;
+  padding-right: 120px;
+}
+
+.resume-card__title {
+  $line-height: (30 / 25);
+  min-height: ($line-height * 2) + em;
+  font-size: 25px;
+  line-height: $line-height;
+}
+
+.resume-card__popup {
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  right: 50px;
+  display: none;
+  padding: 10px;
+  background-color: white;
+}
+
+.resume-card__body {
+  position: relative;
+  height: 234px;
+}
+
+.resume-card__body--bmi {
+  padding-top: 35px;
+
+  & .value {
+    position: relative;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+  
+    & .large {
+      font-size: 120px;
+      line-height: 0.75em;
+    }
+  
+    & .comma {
+      position: relative;
+      right: -2px;
+    }
+  
+    & .small {
+      position: relative;
+      top: -2px;
+      left: -14px;
+      align-items: flex-start;
+      font-size: 40px;
+      line-height: 1em;
+    }
+  }
+
+  & .picture {
+    display: block;
+    margin-top: 11px;
+    margin-left: 11px;
+  }
+}
+
+.resume-card__body--age {
+  overflow: hidden;
+
+  & .picture {
+    display: block;
+    position: relative;
+    left: 1px;
+    margin: 58px auto 0;
+  }
+}
+
+.resume-card__body--calories {
+  padding-top: 47px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+  & .picture {
+    display: block;
+    position: relative;
+    left: 1px;
+    margin: 0 auto 17px;
+  }
+
+    & .current {
+    position: absolute;
+    top: calc(50% + 10px);
+    left: calc(50% + 1px);
+    font-size: 24px;
+    line-height: (26 / 24);
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  & .min-max {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0 auto;
+    color: #82888f;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  & .max {
+    margin-right: 7px;
+  }
+}
+
+.resume-card__body--water {
+  & .picture-container {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 35px;
+  }
+  
+  & .picture {
+    display: block;
+    position: relative;
+    left: 5px;
+    margin-left: 81px;
+  }
+
+  & .scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 12px;
+  
+    & .max {
+      margin-top: 17px;
+    }
+  }
+  
+  & .value {
+    position: absolute;
+    top: calc(70% + 3px);
+    left: calc(50% - 2px);
+    font-size: 50px;
+    font-weight: 300;
+    line-height: (75 / 50);
+    transform: translate(-50%, -50%);
+  
+    & .small {
+      font-size: 40px;
+    }
+  }
+}
+
+.resume-card__body--weight {
+  padding-top: 25px;
+
+  & .target {
+    position: relative;
+    left: 2px;
+    width: 188px;
+    height: 188px;
+    margin: 0 auto;
+    padding: 27px;
+    text-align: center;
+    background-clip: content-box;
+    background-image: linear-gradient(
+      to left,
+      $boy-target-start,
+      $boy-target-end
+    );
+    border: 1px solid #545e6a;
+    border-radius: 100%;
+  
+    & .value {
+      display: block;
+      margin-top: 33px;
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+    }
+  
+    & .unit {
+      display: block;
+      margin-top: -1px;
+      font-size: 16px;
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      line-height: 1;
+    }
+  }
+}
+
+.boy .resume-card__body--weight .target {
+  background-image: linear-gradient(
+    to left,
+    $boy-target-start,
+    $boy-target-end
+  );
+}
+
+.girl .resume-card__body--weight .target {
+  background-image: linear-gradient(
+    to left,
+    $girl-target-start,
+    $girl-target-end
+  );
+}
+
+.resume-card__body--keto {
+  & svg {
+    display: block;
+    height: 210px;
+    margin: 0 auto;
+    padding-top: 28px;
+  }
+
+  & #carbs {
+    // display: none;
+  }
+
+  & #proteins {
+    display: none;
+  }
+
+  & #fats {
+    display: none;
+  }
+
+  & .value {
+    font-size: 60px;
+    line-height: 1;
+    fill: white;
+  }
+
+  & .unit {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    fill: #82888f;
+  }
+}
+
+.resume-card__bottom {
+  margin-top: auto;
+  padding-bottom: 32px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.resume-card__subtitle {
+  $line-height: (30 / 18);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: ($line-height * 2) + em;
+  color: transparentize(white, 0.3);
+  font-size: 18px;
+  line-height: $line-height;
+}
+
+.resume-card__result {
+  $line-height: (30 / 18);
+  min-height: ($line-height) + em;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: $line-height;
+}
+
+.resume-card__result--bmi {
+  &-01 {
+    color: #05a7f0;
+  }
+
+  &-07 {
+    color: #ce1c0d;
+  }
+}
+
+.resume-card__result--age {
+  &-01 {
+    color: #2ccda4;
+  }
+}
+
+.resume-card__result--calories {
+  &-01 {
+    color: #05a7f0;
+  }
+
+  &-02 {
+    color: #2ccda4;
+  }
+
+  &-03 {
+    color: #f8da0e;
+  }
+
+  &-04 {
+    color: #ce1c0d;
+  }
+}
+
+.resume-card__result--water {
+  color: #05a7f0;
+}
+
+.resume-card__result--weight-01 {
+  color: #fa7c67;
+}

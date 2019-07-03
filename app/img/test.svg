@@ -1,0 +1,94 @@
+<svg version="1.1" class="m-item-summary__graph-5" id="ketogenic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 232 232" style="enable-background:new 0 0 232 232;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#3E3A54;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+                    .ketogenic-hidden{opacity: 0;}
+                    .js-ketogenic-type {transition: 0.65s ease;}
+                    .st2{display:inline;}
+                    .st3{fill:none;}
+                    .st8{display:inline;fill:url(#Oval-6-Copy_2_);}
+
+                    .st9{display:inline;fill:none;stroke:url(#_x31_st-copy-2_1_);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:730.7143,1550;}
+                    .st10{display:inline;fill:url(#Oval-6-Copy_3_);}
+
+                    .st11{display:inline;fill:none;stroke:url(#_x31_st-copy_2_);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:730.7143,1550;}
+                    .st12{display:inline;fill:url(#Oval-6_1_);}
+
+                    .st13{display:inline;fill:none;stroke:url(#fats_3_);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:730.7143,1550;}
+                </style>
+                <g id="empty">
+                    <path id="fats_1_" class="st0" d="M5.6,83.9C2.6,94.1,1,105,1,116.2C1,179.6,52.5,231,116,231s115-51.4,115-114.8
+            			c0-47-28.3-87.3-68.7-105.1"></path>
+                    <path id="protein_1_" class="st0" d="M156.5,8.3C143.9,3.6,130.3,1,116.1,1C81.6,1,50.6,16.3,29.5,40.6"></path>
+                    <path id="carbs_2_" class="st0" d="M25.1,46.1c-7.5,9.6-13.5,20.4-17.6,32"></path>
+                </g>
+                <g id="carbs" transform="translate(165.000000, 175.000000)" class="js-ketogenic-type js-ketogenic-carbs ketogenic-hidden">
+                    <g id="subtitle-wrap_2_" class="st2">
+                        <rect x="-124.8" y="-41.4" class="st3" width="208.9" height="20.3"></rect>
+                        <text id="subtitle_2_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -25)" class="st4 st5 st6 m-item-summary__graph-5-subtitle" fill="rgba(255, 255, 255, 0.5)">Carbs</text>
+                    </g>
+                    <g id="title-wrap_2_" class="st2">
+                        <text id="title_2_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -65)" class="st4 st5 st7 m-item-summary__graph-5-title" fill="#FF670D">5%</text>
+                    </g>
+
+                    <radialGradient id="Oval-6-Copy_2_" cx="-97.0674" cy="-9.0251" r="1.6321" gradientTransform="matrix(0.5806 -70.1887 -70.1884 -0.5806 -625.9533 -6879.1401)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" style="stop-color:#FF3D1A;stop-opacity:0"></stop>
+                        <stop offset="0.5059" style="stop-color:#FF3D1A;stop-opacity:0"></stop>
+                        <stop offset="1" style="stop-color:#FF3D1A;stop-opacity:0.1124"></stop>
+                    </radialGradient>
+                    <path id="Oval-6-Copy" class="st8" d="M-48.9-59c0.1-0.6-30.2-24-91-70.2c-6.6,7.9-15.1,22.8-17.9,33.1
+            			C-85.4-70.7-49.1-58.4-48.9-59z"></path>
+
+                    <linearGradient id="_x31_st-copy-2_1_" gradientUnits="userSpaceOnUse" x1="-101.7702" y1="-6.9153" x2="-102.7702" y2="-7.9153" gradientTransform="matrix(17.6164 0 0 -32.0238 1652.4612 -351.1338)">
+                        <stop offset="0" style="stop-color:#FCAE51"></stop>
+                        <stop offset="1" style="stop-color:#FD0B0B"></stop>
+                    </linearGradient>
+                    <path id="_x31_st-copy-2" class="st9" d="M-139.9-128.9c-7.5,9.6-13.5,20.4-17.6,32"></path>
+                </g>
+                <g id="protein" transform="translate(165.000000, 175.000000)" class="js-ketogenic-type js-ketogenic-protein">
+                    <g id="subtitle-wrap_3_" class="st2">
+                        <rect x="-154.8" y="-41.4" class="st3" width="208.9" height="20.3"></rect>
+                        <text id="subtitle_3_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -25)" class="st4 st5 st6 m-item-summary__graph-5-subtitle" fill="rgba(255, 255, 255, 0.5)">Protein</text>
+                    </g>
+                    <g id="title-wrap_3_" class="st2">
+                        <text id="title_3_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -65)" class="st4 st5 st7 m-item-summary__graph-5-title" fill="#B3FF3E">20%</text>
+                    </g>
+
+                    <radialGradient id="Oval-6-Copy_3_" cx="-97.7266" cy="-9.436" r="0.9927" gradientTransform="matrix(-3.4798 -114.9473 -114.9473 3.4798 -1473.5591 -11260.4668)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" style="stop-color:#86F515;stop-opacity:0"></stop>
+                        <stop offset="0.5059" style="stop-color:#86F515;stop-opacity:0"></stop>
+                        <stop offset="1" style="stop-color:#86F515;stop-opacity:0.1124"></stop>
+                    </radialGradient>
+                    <path id="Oval-6-Copy_1_" class="st10" d="M-48.9-59c0,0,13.4-35.9,40.3-107.8c-12.6-4.7-26.2-7.2-40.3-7.2
+            			c-34.5,0-65.5,15.1-86.6,39.1C-77.7-84.3-48.9-59-48.9-59z"></path>
+
+                    <linearGradient id="_x31_st-copy_2_" gradientUnits="userSpaceOnUse" x1="-98.6623" y1="-7.2465" x2="-99.3974" y2="-8.3579" gradientTransform="matrix(126.96 0 0 -39.56 12499.5596 -464.04)">
+                        <stop offset="0" style="stop-color:#D3FF2A"></stop>
+                        <stop offset="1" style="stop-color:#1FD812"></stop>
+                    </linearGradient>
+                    <path id="_x31_st-copy_1_" class="st11" d="M-8.5-166.7c-12.6-4.7-26.1-7.3-40.3-7.3c-34.5,0-65.5,15.3-86.6,39.6"></path>
+                </g>
+                <g id="fat" transform="translate(165.000000, 175.000000)" class="js-ketogenic-type js-ketogenic-fats ketogenic-hidden">
+                    <g id="subtitle-wrap_1_" class="st2">
+                        <rect x="-154.8" y="-41.4" class="st3" width="208.9" height="20.3"></rect>
+                        <text id="subtitle_1_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -25)" class="st4 st5 st6 m-item-summary__graph-5-subtitle" fill="rgba(255, 255, 255, 0.5)">Fats</text>
+                    </g>
+                    <g id="title-wrap_1_" class="st2">
+                        <text id="title_1_" text-anchor="middle" alignment-baseline="central" transform="matrix(1 0 0 1 -50 -65)" class="st4 st5 st7 m-item-summary__graph-5-title" fill="#0DADFF">75%</text>
+                    </g>
+
+                    <radialGradient id="Oval-6_1_" cx="-98.2001" cy="-9.1786" r="0.511" gradientTransform="matrix(1.347518e-14 -220.0664 -220.0663 -1.347518e-14 -2068.9111 -21669.293)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" style="stop-color:#2CA8FF;stop-opacity:0"></stop>
+                        <stop offset="0.5059" style="stop-color:#2CA8FF;stop-opacity:0"></stop>
+                        <stop offset="1" style="stop-color:#2CA8FF;stop-opacity:0.1124"></stop>
+                    </radialGradient>
+                    <path id="Oval-6" class="st12" d="M-49,56C14.5,56,66,4.5,66-59c0-46.6-29-87-68.8-105.1C-33.6-94-49-59-49-59
+            			s-36.8-10.7-110.3-32.1c-2.9,10-4.7,21.2-4.7,32.1C-164,4.5-112.5,56-49,56z"></path>
+
+                    <linearGradient id="fats_3_" gradientUnits="userSpaceOnUse" x1="-99.1847" y1="-9.5446" x2="-98.3914" y2="-8.9482" gradientTransform="matrix(230 0 0 -219.88 22672 -2076.8)">
+                        <stop offset="0" style="stop-color:#30B3FD"></stop>
+                        <stop offset="1" style="stop-color:#0B43FD"></stop>
+                    </linearGradient>
+                    <path id="fats_2_" class="st13" d="M-159.4-91.1c-3,10.3-4.6,21.1-4.6,32.3C-164,4.6-112.5,56-49,56S66,4.6,66-58.8
+            			c0-47-28.3-87.3-68.7-105.1"></path>
+                </g>
+                        </svg>

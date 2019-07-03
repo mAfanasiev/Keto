@@ -1,0 +1,110 @@
+.result {
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.result__top {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 133px;
+  border-bottom: 1px solid transparentize(white, 0.8);
+}
+
+.result__text {
+  flex-grow: 1;
+  max-width: 570px;
+  padding-top: 179px;
+}
+
+.result__message {
+  position: relative;
+  left: -5px;
+  margin-bottom: 61px;
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: (65 / 60);
+}
+
+.result__phone {
+  position: relative;
+  right: -21px;
+  flex-grow: 1;
+  max-width: 540px;
+  margin-top: 89px;
+
+  & img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.result__target {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 540px;
+  height: 540px;
+  transform: translate(-50%, -50%);
+
+  & .half {
+    width: 449px;
+    height: 449px;
+  }
+
+  & .center {
+    width: 374px;
+    height: 374px;
+  }
+}
+
+.result__scroll {
+  position: relative;
+  top: 2px;
+  display: block;
+  align-self: flex-end;
+  width: 25px;
+  height: 50px;
+  margin-left: 3px;
+  margin-right: auto;
+  padding: 0;
+  background: none;
+  border: 2px solid transparentize(#dadada, 0.7);
+  border-radius: 12px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: 0 auto;
+    border-radius: 100%;
+  }
+
+  &::before {
+    margin-top: 10px;
+    background-color: #2ccda4;
+  }
+
+  &::after {
+    margin-top: 3px;
+    background-color: #f54f63;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid #dadada;
+    outline: none;
+  }
+}
+
+.result__resume {
+  padding-top: 112px;
+}
+
+@import './resume';
+@import "./about";

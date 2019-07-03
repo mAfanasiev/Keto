@@ -1,0 +1,39 @@
+.decorate-target,
+.boy .decorate-target {
+  display: flex;
+  background-image:
+    linear-gradient(to right, transparentize($boy-target-start, $target-inner-transparent), transparentize($boy-target-end, $target-inner-transparent));
+  border-radius: 100%;
+
+  & .half,
+  & .center {
+    display: inherit;
+    margin: auto;
+    border-radius: inherit;
+  }
+
+  & .half {
+    background-image:
+      linear-gradient(to right, transparentize($boy-target-start, $target-half-transparent), transparentize($boy-target-end, $target-half-transparent));
+  }
+
+  & .center {
+    background-image:
+      linear-gradient(to right, transparentize($boy-target-start, $target-center-transparent), transparentize($boy-target-end, $target-center-transparent));
+  }
+}
+
+.girl .decorate-target {
+  background-image:
+    linear-gradient(to right, transparentize($girl-target-start, $target-inner-transparent), transparentize($girl-target-end, $target-inner-transparent));
+
+  & .half {
+    background-image:
+      linear-gradient(to right, transparentize($girl-target-start, $target-half-transparent), transparentize($girl-target-end, $target-half-transparent));
+  }
+
+  & .center {
+    background-image:
+      linear-gradient(to right, transparentize($girl-target-start, $target-center-transparent), transparentize($girl-target-end, $target-center-transparent));
+  }
+}
