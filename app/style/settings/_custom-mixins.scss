@@ -7,12 +7,13 @@
 			url("../img/Fish-img.png"),
 			url("../img/brokoli-img.png"),
 			url("../img/lime-img.png"),
-			url('../img/result-bg.jpg');
+			url("../img/result-bg.jpg");
   } @else if $variant == 'partial' {
     background-image:
       url("../img/Fish-img.png"),
       url("../img/paper-img.png"),
-      url("../img/brokoli-img.png");
+      url("../img/brokoli-img.png"),
+			url("../img/result-bg.jpg"),
   }
   background-repeat: no-repeat;
   background-size: auto;

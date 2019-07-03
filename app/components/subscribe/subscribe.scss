@@ -171,40 +171,28 @@
 }
 
 .subscribe__button {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  height: 60px;
   margin: 0 auto;
-  padding: 0;
-  padding-left: 54px;
-  color: white;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  text-align: left;
-  background-image: linear-gradient(
-    to right, $boy-target-start, $boy-target-end
-  );
-  border-radius: 30px;
-  cursor: pointer;
+  // position: relative;
+  // display: block;
+  // width: 100%;
+  // max-width: 250px;
+  // height: 60px;
+  // margin: 0 auto;
+  // padding: 0;
+  // padding-left: 54px;
+  // color: white;
+  // font-family: "Roboto", Arial, Helvetica, sans-serif;
+  // font-size: 20px;
+  // text-align: left;
+  // background-image: linear-gradient(
+  //   to right, $boy-target-start, $boy-target-end
+  // );
+  // border-radius: 30px;
+  // cursor: pointer;
 
-  &::after {
-    content: "";
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    width: 23px;
-    height: 20px;
-    margin-left: 15px;
-    background-image: url("../img/main-button-arrow-02.svg");
-    background-position: center center;
-    background-size: 100% 100%;
-  }
+  // &::after {
 
-  &:active {
-    transform: translateY(3px);
-  }
+  // }
 }
 
 .girl .subscribe__button {

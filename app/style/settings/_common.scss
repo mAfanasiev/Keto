@@ -23,6 +23,15 @@ body.result {
 		center top; // main background
 }
 
+body.result {
+	@include decorate-background('partial');
+	background-position:
+	left -754px top calc(50% - 18px), // fish
+		right -562px top -281px, // corn/peper
+		right -199px bottom 570px, // broccoli #bottom
+		center top; // main background
+}
+
 img {
 	max-width: 100%;
 }

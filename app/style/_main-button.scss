@@ -1,9 +1,6 @@
-.main-button,
-.boy .main-button {
+.main-button {
   position: relative;
   display: block;
-  margin: 0;
-  padding: 0;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 
@@ -15,6 +12,14 @@
   text-decoration: none;
   border-radius: 40px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    background-position: center center;
+    background-size: 100% 100%;
+    transform: translateY(-50%);
+  }
+
   &--lg {
     width: 398px;
     height: 80px;
@@ -24,14 +29,26 @@
   }
 
   &--lg::after {
-    content: "";
-    position: absolute;
     top: calc(50% + 1px);
     right: 56px;
     width: 43px;
     height: 20px;
     background-image: url("../img/main-button-arrow.svg");
-    transform: translateY(-50%);
+  }
+
+  &--sm {
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  &--sm::after {
+    content: "";
+    top: calc(50% + 1px);
+    right: 1px;
+    width: 23px;
+    height: 20px;
+    background-image: url("../img/main-button-arrow-02.svg");
   }
 }
 
