@@ -1,12 +1,14 @@
-body {	
+body {
+	position: relative;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	min-height: 100vh;
-	background-image: url('../img/main-bg.jpg');
+	color: #fff;
+	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	background-size: auto, auto, auto, auto, cover;
+	background-position:left -650px top -16px, right -473px top -282px, right -120px bottom -90px, right calc(50% + 37px) top -5px, center center;
 }
 
 body.result {
@@ -71,7 +73,10 @@ svg {
 		font-size: 26px;
 	}
 }
-
+br {
+	font-size: 0;
+	line-height: 0;
+}
 .text-bold {
 	font-weight: 700;
 }
