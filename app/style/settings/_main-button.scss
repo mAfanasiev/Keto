@@ -1,0 +1,50 @@
+$boy-target-start: #76e5c8;
+$boy-target-end: #27cda2;
+$girl-target-start: #fb8768;
+$girl-target-end: #f54d64;
+
+.main-button {
+  position: relative;
+  display: block;
+  max-width: 398px;
+  min-height: 80px;
+  margin: 0;
+  padding: 0 56px;
+  color: white;
+  font-size: 28px;
+  line-height: 80px;
+  background-image: linear-gradient(
+    to left,
+    $boy-target-start,
+    $boy-target-end
+  );
+  text-decoration: none;
+  border-radius: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 1px);
+    right: 56px;
+    width: 43px;
+    height: 20px;
+    background-image: url("../img/main-button-arrow.svg");
+    transform: translateY(-50%);
+  }
+}
+
+.boy .main-button {
+  background-image: linear-gradient(
+    to left,
+    $boy-target-start,
+    $boy-target-end
+  );
+}
+
+.female .main-button {
+  background-image: linear-gradient(
+    to left,
+    $girl-target-start,
+    $girl-target-end
+  );
+}

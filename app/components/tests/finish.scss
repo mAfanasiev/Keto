@@ -1,0 +1,110 @@
+.finish {
+  &__top {
+    width: 120px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-circle {
+      border-radius: 50%;
+      background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+      &--1, &--2 {
+        opacity: 0.15;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &--1 {
+        width: 100%;
+        height: 100%;
+      }
+      &--2 {
+        width: 100px;
+        height: 100px;
+      }
+      &--3 {
+        width: 84px;
+        height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 45px;
+    margin-top: 18px;
+  }
+  &__circle {
+    border-radius: 50%;
+
+    width: 230px;
+    height: 230px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 123px;
+
+    &-bg {
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0 0 37px transparentize(#74e4c7, .9);
+      border-radius: 50%;
+    }
+    &-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-path {
+      stroke: url(#man);
+    }
+    &-proc {
+      font-size: 60px;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    margin-top: 94px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-item {
+      margin-right: 10px;
+      margin-left: 10px;
+      opacity: 0.3;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 300;
+      transform: scale(.8);
+      &.active {
+        opacity: 1;
+        transform: scale(1);
+
+      }
+      &.small {
+        transform: scale(.6);
+        opacity: .2;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.female {
+  .header__menu-close path {
+    fill: url("#woman");
+  }
+  .progressBar {
+    &--after {
+      background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+    }
+  }
+
+  #test1 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 1) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+
+    }
+  }
+  #test2 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 2) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  #test3 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 3) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  #test4 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 4) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  #test5 {
+    .progressBar {
+
+      &__item {
+        &:nth-child(-n + 5) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  #test6 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 6) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  #test7 {
+    .progressBar {
+      &__item {
+        &:nth-child(-n + 7) {
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+
+  #test8 {
+    .progressBar {
+      &__item {
+        &:nth-child(n) {
+
+          .progressBar__circle {
+            background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+          }
+          .progressBar__ico path {
+            fill: url("#woman");
+          }
+        }
+      }
+    }
+  }
+  & .test__percent-circle--1, & .test__percent-circle--2, &  .test__percent-circle--3 {
+    background-image: linear-gradient(to left,#fb8768 0%,#f54d64 100%);
+  }
+  & .test__content-item.active {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+  }
+  .test__checkbox.active {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+  }
+  & .test__checkbox.active .test__checkbox-img {
+    fill: url("#woman");
+  }
+  .test__checkbox.active .test__checkbox-el {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+    border: none;
+  }
+
+  & .help__percent-circle--1,
+  & .help__percent-circle--2,
+  & .help__percent-circle--3 {
+    background-image: linear-gradient(to left,#fb8768 0%,#f54d64 100%);
+  }
+
+  & .test__tabs-field.active svg {
+    fill: url(#woman);
+  }
+
+  & .test__tabs {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+
+  }
+  & .test__tabs-item.active {
+    background-image: linear-gradient(to left,#fb8768 0%,#f54d64 100%);
+  }
+}
