@@ -171,25 +171,28 @@ $( document ).ready(function() {
         }
     });
 
-    function her2() {
+    function anim1() {
 
         $($('.finish__text-item')[1]).addClass('active').siblings().removeClass('active');
         $($('.finish__text-item')[2]).removeClass('small');
 
     }
 
-    function her3() {
+    function anim2() {
 
         $($('.finish__text-item')[2]).removeClass('small').addClass('active').siblings().removeClass('active');
         $($('.finish__text-item')[0]).addClass('small');
 
 
     }
-    function her33() {
-        // quiz.hash = 'test1';
-        // window.localStorage.setItem('quiz', JSON.stringify(quiz));
-        // window.location.href = 'http://google.com';
+    function retarget() {
+        quiz.hash = 'test1';
+        quiz.animation = false;
+        window.localStorage.setItem('quiz', JSON.stringify(quiz));
+        window.location.href += 'result.html';
     }
+
+    console.log(window.location.href);
 
     function startAnim () {
         function updateHandler() {
@@ -203,13 +206,10 @@ $( document ).ready(function() {
         tl_eleven
             .fromTo('.finish__circle-path',animationP11time ,{"stroke-dashoffset":730},{"stroke-dashoffset":0, ease:Linear.easeNone})
             .to(plan, animationP11time, {score: 100, roundProps: "score", onUpdate:updateHandler, ease:Linear.easeNone}, 0)
-            // .to('.q', animationP11time, {onStart:her}, animationP11time/3)
-            // .to('.q', animationP11time, {onStart:her2}, 2 * animationP11time/3)
-            // .fromTo('.tl_slider',animationP11time - 1,{x:"33%"},{x: "-33%", ease: Power0.easeNone}, 1)
             .fromTo('.tl_slider',animationP11time / 3,{x:"50%"},{x: "18%", ease: SlowMo.ease.config(0.7, 0.7, false)}, 1)
-            .to('.tl_slider',animationP11time / 3,{x: "-18%", onStart:her2, ease: SlowMo.ease.config(0.7, 0.7, false)}, animationP11time / 3)
-            .to('.tl_slider',animationP11time / 3,{x: "-33%", onStart:her3, ease: SlowMo.ease.config(0.7, 0.7, false)}, 2 * animationP11time / 3)
-            .to('.q', 0, {onStart:her33}, animationP11time + 1);
+            .to('.tl_slider',animationP11time / 3,{x: "-18%", onStart:anim1, ease: SlowMo.ease.config(0.7, 0.7, false)}, animationP11time / 3)
+            .to('.tl_slider',animationP11time / 3,{x: "-33%", onStart:anim2, ease: SlowMo.ease.config(0.7, 0.7, false)}, 2 * animationP11time / 3)
+            .to('.q', 0, {onStart:retarget}, animationP11time + .5);
     }
 });
 
