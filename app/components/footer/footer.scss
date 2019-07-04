@@ -3,7 +3,7 @@
   &__content {
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
   }
   &__name {
@@ -15,7 +15,6 @@
     align-self: center;
   }
   &__logo {
-    align-self: baseline;
     width: 107px;
     display: block;
     line-height: 0;
@@ -24,6 +23,48 @@
     width: 175px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    &-item {
+      line-height: 0;
+    }
+  }
+}
+
+@include r(1070) {
+  .footer {
+    padding-bottom: 40px;
+  }
+}
+
+@include r(639) {
+  .footer {
+    padding-bottom: 30px;
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__logo {
+      margin-right: 30px;
+    }
+
+    &__name {
+      order: 3;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+@include r(479) {
+  .footer {
+    &__logo {
+      margin-right: 0px;
+    }
+
+    &__social {
+      width: 145px;
+      align-items: flex-end;
+    }
   }
 }
