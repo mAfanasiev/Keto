@@ -9,11 +9,3 @@ $(document).ready(function () {
     document.querySelector('body').classList.add('male');
   }
 });
-
-// $(function () {
-//   var $input = $('.popup__input[type="email"]');
-
-//   $input.on('keyup input', function () {
-//     console.log(true)
-//   });
-// });

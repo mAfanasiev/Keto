@@ -1,0 +1,90 @@
+.pay {
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.pay__popup {
+  position: relative;
+  width: 100%;
+  max-width: 1030px;
+  min-height: 845px;
+  margin: 183px auto 107px;
+  padding: 81px 0 0;
+  color: white;
+  @include popup-bg();
+}
+
+.pay__target {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+
+  & .half {
+    width: 99px;
+    height: 99px;
+  }
+
+  & .center {
+    position: relative;
+    width: 83px;
+    height: 83px;
+
+    &::after {
+      content: "";
+      display: block;
+      margin: auto;
+      width: 49px;
+      height: 42px;
+      background-image: url("../img/icon-pay.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 49px 32px;
+    }
+  }
+}
+
+.pay__body {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.pay__text {
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.pay__title {
+  margin-bottom: 14px;
+}
+
+.pay__form {
+  margin-bottom: 38px;
+}
+
+.pay__note {
+  position: relative;
+  padding-left: 115px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  & img {
+    position: absolute;
+    top: -8px;
+    left: 27px;
+    width: 80px;
+    height: 25px;
+  }
+}
+
+.pay__note mark,
+.male .pay__note mark {
+  color: #2ccda4;
+}
+
+.female .pay__note mark {
+  color: #f55064;
+}

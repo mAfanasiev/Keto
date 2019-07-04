@@ -1,16 +1,32 @@
-.main-button {
+.common-button {
   position: relative;
   display: block;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 
   background-image: linear-gradient(
-    to left,
+    to right,
     $boy-target-start,
     $boy-target-end
   );
   text-decoration: none;
   border-radius: 40px;
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(3px);
+  }
+
+  &:disabled {
+    color: transparentize(white, 0.3);
+    background-color: #d3d3d3;
+    background-image: none;
+    cursor: auto;
+  }
+
+  &:disabled::after {
+    opacity: 0.7;
+  }
 
   &::after {
     content: "";
@@ -39,20 +55,23 @@
   &--sm {
     width: 250px;
     height: 60px;
+    padding-left: 54px;
+    padding-right: 80px;
     font-size: 20px;
+    text-align: left;
   }
 
   &--sm::after {
     content: "";
-    top: calc(50% + 1px);
-    right: 1px;
+    top: calc(50% - 1px);
+    right: 41px;
     width: 23px;
     height: 20px;
     background-image: url("../img/main-button-arrow-02.svg");
   }
 }
 
-.girl .main-button {
+.female .common-button {
   background-image: linear-gradient(
     to left,
     $girl-target-start,

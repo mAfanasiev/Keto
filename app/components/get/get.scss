@@ -1,0 +1,198 @@
+.get {
+  position: relative;
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.get__background-images {
+  & img {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  & .fish {
+    top: -209px;
+    left: calc(50% - 1600px);
+  }
+
+  .peper {
+    top: -474px;
+    right: calc(50% - 1425px);
+  }
+
+  .broccoli {
+    bottom: -7px;
+    right: calc(50% - 1071px);
+  }
+}
+
+.get__popup {
+  position: relative;
+  width: 100%;
+  max-width: 1030px;
+  min-height: 580px;
+  margin: 123px auto 42px;
+  padding: 64px 0 0;
+  color: white;
+  @include popup-bg();
+}
+
+.get__body {
+  max-width: 830px;
+  margin: 0 auto;
+}
+
+.get__text {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.get__title {
+  margin-bottom: 14px;
+}
+
+.get__rate {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 32px;
+  padding-left: 234px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #2e3844;
+
+  & span {
+    display: inline-block;
+    margin-top: 1px;
+    margin-left: 14px;
+  }
+}
+
+.get__stars {
+  display: flex;
+}
+
+.get__price {
+  position: relative;
+  margin-bottom: 33px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 9px);
+    left: 50%;
+    height: 65px;
+    border-left: 1px solid #2e3844;
+    transform: translate(-50%, -50%)
+  }
+}
+
+.get__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.get__button {
+  position: relative;
+  width: 400px;
+  height: 60px;
+  padding-left: 53px;
+  font-size: 18px;
+  line-height: 60px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &--card::after {
+    top: 30px;
+    right: 50px;
+    width: 36px;
+    height: 23px;
+    background-image: url("../img/icon-card.svg");
+  }
+
+  &--paypal::after {
+    top: 30px;
+    right: 55px;
+    width: 22px;
+    height: 24px;
+    background-image: url("../img/icon-paypal.svg");
+  }
+}
+
+.get__advantages {
+  display: flex;
+  max-width: 1030px;
+  margin: 0 auto 38px;
+  padding-bottom: 39px;
+  padding-left: 4px;
+  padding-right: 2px;
+  font-size: 20px;
+  line-height: (25 / 20);
+  border-bottom: 1px solid #2e3844;
+}
+
+.get__advantage {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 65px;
+
+  &:first-of-type {
+    margin-right: 72px;
+  }
+
+  &:not(:first-of-type) {
+    margin-left: auto;
+    padding-left: 30px;
+    border-left: 1px solid #414c59;
+  }
+}
+
+.get__advantage-icon,
+.male .get__advantage-icon {
+  flex-shrink: 0;
+  margin-right: 22px;
+  fill: url("#man");
+}
+
+.female .get__advantage-icon {
+  fill: url("#woman");
+}
+
+.get__secured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1030px;
+  margin: 0 auto 139px;
+  padding-left: 3px;
+  padding-right: 22px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+
+  & img {
+    margin-top: -1px;
+  }
+}
+
+.get__bottom {
+  margin-bottom: 71px;
+  background-color: white;
+}
+
+.get__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  padding: 0 95px 11px;
+}

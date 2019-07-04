@@ -18,3 +18,8 @@
   background-repeat: no-repeat;
   background-size: auto;
 }
+
+@mixin popup-bg () {
+  background-color: transparentize(#2e3844, 0.4);
+  border-radius: 5px;
+}

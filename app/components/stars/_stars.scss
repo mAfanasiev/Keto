@@ -1,0 +1,36 @@
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars svg {
+  display: block;
+}
+
+.stars svg + svg {
+  margin-left: 13px;
+}
+
+.male .stars svg .border {
+  fill: $boy-target-start;
+}
+
+.male .stars svg .star {
+  fill: url("#man");
+}
+
+.male .stars svg.half .star {
+  fill: url("#man-half");
+}
+
+.female .stars svg .border {
+  fill: $girl-target-start;
+}
+
+.female .stars svg .star {
+  fill: url("#woman");
+}
+
+.female .stars svg.half .star {
+  fill: url("#woman-half");
+}

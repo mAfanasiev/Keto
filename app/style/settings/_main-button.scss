@@ -1,8 +1,3 @@
-$boy-target-start: #76e5c8;
-$boy-target-end: #27cda2;
-$girl-target-start: #fb8768;
-$girl-target-end: #f54d64;
-
 .main-button {
   position: relative;
   display: block;
@@ -12,7 +7,7 @@ $girl-target-end: #f54d64;
   color: white;
   font-size: 28px;
   background-image: linear-gradient(
-    to left,
+    to right,
     $boy-target-start,
     $boy-target-end
   );
@@ -29,20 +24,4 @@ $girl-target-end: #f54d64;
     background-image: url("../img/main-button-arrow.svg");
     transform: translateY(-50%);
   }
-}
-
-.boy .main-button {
-  background-image: linear-gradient(
-    to left,
-    $boy-target-start,
-    $boy-target-end
-  );
-}
-
-.female .main-button {
-  background-image: linear-gradient(
-    to left,
-    $girl-target-start,
-    $girl-target-end
-  );
 }

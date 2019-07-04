@@ -1,0 +1,20 @@
+<svg id="иконка" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-opacity: 0;
+        stroke: #d8dada;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #949494;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rounded_Rectangle_3" data-name="Rounded Rectangle 3" class="cls-1" x="1" y="1" width="30" height="30" rx="5" ry="5"/>
+  <path id="Rounded_Rectangle_7" data-name="Rounded Rectangle 7" class="cls-2" d="M1090,627a2,2,0,1,1-2,2A2,2,0,0,1,1090,627Zm-17.5,7h19a0.5,0.5,0,0,1,.5.5v1a0.5,0.5,0,0,1-.5.5h-19a0.5,0.5,0,0,1-.5-0.5v-1A0.5,0.5,0,0,1,1072.5,634Zm0-6h6a0.5,0.5,0,0,1,.5.5v1a0.5,0.5,0,0,1-.5.5h-6a0.5,0.5,0,0,1-.5-0.5v-1A0.5,0.5,0,0,1,1072.5,628Zm0,10h3a0.5,0.5,0,0,1,.5.5v1a0.5,0.5,0,0,1-.5.5h-3a0.5,0.5,0,0,1-.5-0.5v-1A0.5,0.5,0,0,1,1072.5,638Zm6,0h3a0.5,0.5,0,0,1,.5.5v1a0.5,0.5,0,0,1-.5.5h-3a0.5,0.5,0,0,1-.5-0.5v-1A0.5,0.5,0,0,1,1078.5,638Z" transform="translate(-1066 -616)"/>
+</svg>

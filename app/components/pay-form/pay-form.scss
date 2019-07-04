@@ -1,0 +1,129 @@
+.pay-form {
+  margin-bottom: 38px;
+  padding: 53px 50px 50px;
+  color: black;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.pay-form__top {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.pay-form__payment {
+  margin-left: auto;
+  margin-right: -3px;
+}
+
+.pay-form__value {
+  margin-bottom: 4px;
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.pay-form__value-subtitle {
+  color: #777777;
+  font-size: 13px;
+  text-align: center;
+}
+
+.pay-form__fieldset {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid #d8dada;
+  border-radius: 5px;
+}
+
+.pay-form__info,
+.pay-form__label {
+  font-weight: 500;
+}
+
+.pay-form__info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #d8dada;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    background-image: url("../img/icon-pay-abstract.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.pay-form__info-icons {
+  display: flex;
+  margin-left: auto;
+
+  & img + img {
+    margin-left: 15px;
+  }
+}
+
+.pay-form__fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 18px 19px 20px;
+}
+
+.pay-form__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pay-form__input {
+  display: block;
+  width: 205px;
+  height: 45px;
+  padding: 0 16px;
+  background: none;
+  border: 1px solid #d8dada;
+
+  &::placeholder {
+    color: #999999;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &--number {
+    width: 430px;
+    margin-bottom: 18px;
+  }
+
+  &--number::placeholder {
+    font-size: 16px;
+    letter-spacing: 0.015em;
+    word-spacing: 5px;
+  }
+}
+
+.pay-form__button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 60px;
+  text-transform: uppercase;
+  background-color: #276bbf;
+
+  .pay-form__button:disabled {
+    background-color: #d8dada;
+  }
+}

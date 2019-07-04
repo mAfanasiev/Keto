@@ -23,13 +23,18 @@ body.result {
 		center top; // main background
 }
 
-body.result {
+body.get {
+	background-image: url("../img/result-bg.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+body.pay {
 	@include decorate-background('partial');
 	background-position:
-	left -754px top calc(50% - 18px), // fish
-		right -562px top -281px, // corn/peper
-		right -199px bottom 570px, // broccoli #bottom
-		center top; // main background
+		left -647px top calc(50% - 58px),
+		right -474px top -281px,
+		right -119px bottom 8px,center top
 }
 
 img {

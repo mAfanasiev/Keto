@@ -10,8 +10,7 @@
   margin: 183px auto 324px;
   padding: 81px 0 0;
   color: white;
-  background-color: transparentize(#2e3844, 0.4);
-  border-radius: 5px;
+  @include popup-bg();
 }
 
 .subscribe__target {
@@ -58,56 +57,14 @@
 
 .subscribe__title {
   margin-bottom: 14px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.subscribe__subtitle {
-  color: transparentize(white, 0.5);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: (26 / 20);
 }
 
 .subscribe__field {
-  position: relative;
   margin-bottom: 31px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 32px;
-    width: 30px;
-    height: 20px;
-    background-image: url("../img/subscribe-email-icon.svg");
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
 }
 
 .subscribe__input {
-  width: 100%;
-  height: 60px;
   padding: 0 80px;
-  color: white;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  background-color: $transparent;
-  border: 1px solid #545e6a;
-  border-radius: 5px;
-
-  &::placeholder {
-    color: transparentize(white, 0.5);
-    font-weight: inherit;
-    transition: color 0.3s;
-  }
-
-  &:focus::placeholder {
-    color: $transparent;
-  }
 }
 
 .subscribe__agreement {
@@ -138,7 +95,7 @@
 }
 
 .subscribe__checkbox:checked + .subscribe__check,
-.boy .subscribe__checkbox:checked + .subscribe__check {
+.male .subscribe__checkbox:checked + .subscribe__check {
   background-image: 
     url("../img/check.png"),
     linear-gradient(
@@ -146,7 +103,7 @@
     );
 }
 
-.girl .subscribe__checkbox:checked + .subscribe__check {
+.female .subscribe__checkbox:checked + .subscribe__check {
   background-image:
     url("../img/check.png"),
     linear-gradient(
@@ -159,44 +116,27 @@
   margin-left: 21px;
 }
 
-.boy .subscribe__agreement-link {
+.subscribe__agreement-link,
+.male .subscribe__agreement-link {
   padding-left: 50px;
+  color: #76e5c8;
+}
+
+.female .subscribe__agreement-link {
   color: #f55064;
 }
 
-.boy .subscribe__agreement-link:hover {
+.subscribe__agreement-link:hover,
+.male .subscribe__agreement-link:hover {
   color: white;
   text-decoration: underline;
+  text-decoration-color: #76e5c8;
+}
+
+.female .subscribe__agreement-link:hover {
   text-decoration-color: #f55064;
 }
 
 .subscribe__button {
   margin: 0 auto;
-  // position: relative;
-  // display: block;
-  // width: 100%;
-  // max-width: 250px;
-  // height: 60px;
-  // margin: 0 auto;
-  // padding: 0;
-  // padding-left: 54px;
-  // color: white;
-  // font-family: "Roboto", Arial, Helvetica, sans-serif;
-  // font-size: 20px;
-  // text-align: left;
-  // background-image: linear-gradient(
-  //   to right, $boy-target-start, $boy-target-end
-  // );
-  // border-radius: 30px;
-  // cursor: pointer;
-
-  // &::after {
-
-  // }
-}
-
-.girl .subscribe__button {
-  background-image: linear-gradient(
-    to right, $girl-target-start, $girl-target-end
-  );
 }
