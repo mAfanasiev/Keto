@@ -111,3 +111,105 @@
     }
   }
 }
+
+@include r(1230) {
+  .header {
+    &__menu {
+
+      &-list {
+        width: 400px;
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+@include r(1070) {
+  .header {
+    padding-top: 40px;
+
+    &__menu {
+
+      &-main {
+        right: calc(50% - 5035px);
+      }
+
+      &-close {
+        top: 42px;
+      }
+
+      &-list {
+        width: 325px;
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 24px;
+      }
+
+      &-social {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@include r(767) {
+  .header {
+    padding-top: 40px;
+
+    &__menu {
+
+      &-main {
+        right: calc(50% - 4970px);
+      }
+    }
+  }
+}
+
+@include r(639) {
+  .header {
+    padding-top: 40px;
+
+    &__menu {
+
+      &-main {
+        right: calc(50% - 4890px);
+      }
+    }
+  }
+}
+@include r(479) {
+  .header {
+    padding-top: 25px;
+
+    &__menu {
+      &-text {
+        display: none;
+      }
+      &-list {
+        width: 280px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      &-close {
+        top: 17px;
+        right: -10px;
+      }
+
+      &-link {
+        font-size: 20px;
+      }
+
+      &-main {
+        background-color: #121920;
+        width: 100%;
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+}

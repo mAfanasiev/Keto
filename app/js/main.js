@@ -4,4 +4,5 @@
 //=include ../components/subscribe/subscribe.js
 //=include ../components/get/get.js
 //=include ../components/pay-form/pay-form.js
+//=include ../components/faq/faq.js
 //=include ../components/footer/footer.js
