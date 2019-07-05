@@ -43,18 +43,6 @@ body {
 	}
 }
 
-body.result {
-	@include decorate-background();
-	background-position:
-		left calc(50% - 147px) top -74px, // lime #top
-		left -93px top 87px, // broccoli #top
-		right -562px top -281px, // corn/peper
-		left -754px top calc(50% - 18px), // fish
-		right -199px bottom 570px, // broccoli #bottom
-		left -118px bottom 27px, // lime #bottom
-		center top; // main background
-}
-
 body.get {
 	background-image: url("../img/result-bg.jpg");
 	background-position: center center;
