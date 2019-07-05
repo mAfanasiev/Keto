@@ -1,0 +1,79 @@
+.card-weight__body {
+  padding-top: 25px;
+
+  & .target {
+    position: relative;
+    left: 2px;
+    width: 188px;
+    height: 188px;
+    margin: 0 auto;
+    padding: 27px;
+    text-align: center;
+    background-clip: content-box;
+    background-image: linear-gradient(
+      to right,
+      $boy-target-start,
+      $boy-target-end
+    );
+    border: 1px solid #545e6a;
+    border-radius: 100%;
+  
+    & .value {
+      display: block;
+      margin-top: 33px;
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+    }
+  
+    & .unit {
+      display: block;
+      margin-top: -1px;
+      font-size: 16px;
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      line-height: 1;
+    }
+  }
+}
+
+.card-weight__result-01 {
+  color: #fa7c67;
+}
+
+.male .card-weight__body .target {
+  background-image: linear-gradient(
+    to right,
+    $boy-target-start,
+    $boy-target-end
+  );
+}
+
+.female .card-weight__body .target {
+  background-image: linear-gradient(
+    to right,
+    $girl-target-start,
+    $girl-target-end
+  );
+}
+
+@include r(1070) {
+  .card-weight__body {
+    height: 172px;
+    padding-top: 0;
+  }
+
+  .card-weight__body .target {
+    width: 150px;
+    height: 150px;
+    padding: 21px;
+  }
+
+  .card-weight__body .target .value {
+    margin-top: 26px;
+    font-size: 40px;
+  }
+
+  .card-weight__body .target .unit {
+    font-size: 15px;
+  }
+}

@@ -13,8 +13,8 @@ $(document).ready(function () {
 });
 
 (function () {
-  var CARD_TOGGLE_CLASS_NAME = 'resume-card--about';
-  var ABOUT_BTN_CLASS_NAME = 'resume-card__about-show';
+  var CARD_TOGGLE_CLASS_NAME = 'result-card--about';
+  var ABOUT_BTN_CLASS_NAME = 'result-card__about-show';
 
   var onCardShowBtnClick = function (clickEvt) {
     var target = clickEvt.target;

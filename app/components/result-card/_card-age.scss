@@ -1,0 +1,28 @@
+.card-age__body {
+  overflow: hidden;
+
+  & .picture {
+    display: block;
+    position: relative;
+    left: 1px;
+    width: 100%;
+    max-width: 200px;
+    margin: 58px auto 0;
+  }
+}
+
+.card-age__result-01 {
+  color: #2ccda4;
+}
+
+@include r(1070) {
+  .card-age__body {
+    padding-top: 37px;
+  }
+
+  .card-age__body .picture {
+    max-width: 153px;
+    height: 136px;
+    margin: 0 auto;
+  }
+}

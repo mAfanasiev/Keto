@@ -1,3 +1,12 @@
+html,
+body {
+	overflow-x: hidden;
+}
+
+html.overflow {
+	overflow: hidden;
+}
+
 body {
 	position: relative;
 	font-family: 'Roboto', sans-serif;
@@ -5,19 +14,18 @@ body {
 	overflow-x: hidden;
 	min-height: 100vh;
 	color: #fff;
-	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
+	background-image: url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: auto, auto, auto, auto, cover;
-	background-position:left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
+	background-position: left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
 	background-attachment: scroll, scroll, scroll, scroll, fixed;
-
-
 
 	@include r(1230) {
 		background-image: url('../img/main-bg.jpg');
 		background-size: cover;
 		background-position: center center;
 	}
+
 	//@include r(1070) {
 	//	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
 	//	background-size: auto, auto, auto, auto, cover;
@@ -39,41 +47,7 @@ body {
 	//	background-position:left -125px top 147px, right -28px top 147px, center center;
 	//}
 }
-html {
-	&.overflow {
-		overflow: hidden;
 
-	}
-}
-body.result {
-	@include decorate-background();
-	background-position:
-		left calc(50% - 147px) top -74px, // lime #top
-		left -93px top 87px, // broccoli #top
-		right -562px top -281px, // corn/peper
-		left -754px top calc(50% - 18px), // fish
-		right -199px bottom 570px, // broccoli #bottom
-		left -118px bottom 27px, // lime #bottom
-		center top; // main background
-}
-
-body.get {
-	background-image: url("../img/result-bg.jpg");
-	background-position: center center;
-	background-size: cover;
-}
-
-body.pay {
-	@include decorate-background('partial');
-	background-position:
-		left -647px top calc(50% - 58px),
-		right -474px top -281px,
-		right -119px bottom 8px,center top
-}
-
-body, html {
-	overflow-x: hidden;
-}
 img {
 	max-width: 100%;
 }
@@ -85,20 +59,25 @@ svg {
 .wrapper {
 	width: 1170px;
 	margin: 0 auto;
+
 	@include r(1230) {
 		width: 1030px;
 	}
+
 	@include r(1070) {
 		width: 768px;
 		padding-right: 20px;
 		padding-left: 20px;
 	}
+
 	@include r(767) {
 		width: 640px;
 	}
+
 	@include r(639) {
 		width: 480px;
 	}
+
 	@include r(479) {
 		width: 320px;
 	}
@@ -113,12 +92,15 @@ svg {
 		padding-right: 20px;
 		padding-left: 20px;
 	}
+
 	@include r(767) {
 		width: 640px;
 	}
+
 	@include r(639) {
 		width: 480px;
 	}
+
 	@include r(479) {
 		width: 320px;
 	}
@@ -128,6 +110,7 @@ br {
 	font-size: 0;
 	line-height: 0;
 }
+
 .text-bold {
 	font-weight: 700;
 }
@@ -142,10 +125,12 @@ br {
 
 .visually-hidden {
 	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	padding: 0 !important;
 	border: 0 !important;
+	bottom: 0 !important;
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;

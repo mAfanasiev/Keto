@@ -1,0 +1,75 @@
+.card-water__body {
+  & .picture-container {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 35px;
+  }
+
+  & .picture {
+    display: block;
+    position: relative;
+    left: 5px;
+    margin-left: 81px;
+  }
+
+  & .scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 12px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  
+    & .max {
+      margin-top: 17px;
+    }
+  }
+  
+  & .value {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: (75 / 50);
+    transform: translate(-50%, -50%);
+  
+    & .small {
+      font-size: 40px;
+    }
+  }
+}
+
+.card-water__result-01 {
+  color: #05a7f0;
+}
+
+@include r(1070) {
+  .card-water__body .picture-container {
+    padding-top: 0;
+  }
+
+  .card-water__body .picture {
+    max-width: 123px;
+    margin-top: -5px;
+    margin-left: auto;
+  }
+
+  .card-water__body .value {
+    top: 65%;
+    left: 48%;
+    font-size: 40px;
+  }
+  
+  .card-water__body .value .small {
+    font-size: 30px;
+  }
+
+  .card-water__body .scale {
+    margin-left: 7px;
+    margin-right: 52px;
+    font-size: 16px;
+    height: 161px;
+  }
+}
