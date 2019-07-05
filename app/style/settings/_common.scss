@@ -8,42 +8,39 @@ body {
 	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: auto, auto, auto, auto, cover;
-	background-position:left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
+	background-position:left calc(50% - 1050px) top -16px, right calc(50% - 995px) top -282px, right calc(50% - 930px) top 975px, right calc(50% + 37px) top -5px, center center;
 	background-attachment: scroll, scroll, scroll, scroll, fixed;
 
 
 
-	@include r(1230) {
-		background-image: url('../img/main-bg.jpg');
-		background-size: cover;
-		background-position: center center;
+	@include r(1920) {
+		background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
+		background-size: 700px auto, 500px auto,  150px auto, auto, cover;
+		background-position:left -400px top 100px, right -220px top 100px, right -50px bottom 100px, right calc(50% + 37px) top -5px, center center;
 	}
-	//@include r(1070) {
-	//	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
-	//	background-size: auto, auto, auto, auto, cover;
-	//	background-position:left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
-	//}
-	//@include r(767) {
-	//	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
-	//	background-size: auto, auto, auto, auto, cover;
-	//	background-position:left -650px top -16px, right -473px top -282px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
-	//}
-	//@include r(639) {
-	//	background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
-	//	background-size: 300px auto, 300px auto, auto, auto, cover;
-	//	background-position:left -125px top 447px, right -100px top 100px, right -120px top 975px, right calc(50% + 37px) top -5px, center center;
-	//}
-	//@include r(479) {
-	//	background-image:  url('../img/fish__mob.png'), url('../img/brokoli-img.png'), url('../img/main-bg.jpg');
-	//	background-size: auto, 97px auto, cover;
-	//	background-position:left -125px top 147px, right -28px top 147px, center center;
-	//}
+	@include r(1070) {
+		background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
+		background-size: 600px auto, 400px auto,  120px auto, auto, cover;
+		background-position:left -300px top 100px, right -170px top 100px, right -50px bottom 60px, right calc(50% + 37px) top -5px, center center;
+	}
+	@include r(767) {
+		background-image:  url('../img/Fish-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/main-bg.jpg');
+		background-size: 500px auto, 120px auto, auto, cover;
+		background-position:left -300px top 100px, right -50px bottom 80px, right calc(50% + 37px) top -5px, center center;
+	}
+
+	@include r(639) {
+		background-image:  url('../img/fish__mob.png'), url('../img/brokoli-mob.png'), url('../img/main-bg.jpg');
+		background-size: auto, 97px auto, cover;
+		background-position:left -125px top 147px, right -28px top 147px, center center;
+	}
 }
 html {
 	&.overflow {
 		overflow: hidden;
 
 	}
+
 }
 body.result {
 	@include decorate-background();

@@ -25,3 +25,11 @@
     transform: translateY(-50%);
   }
 }
+
+.female .main-button {
+  background-image: linear-gradient(
+                  to left,
+                  $girl-target-start,
+                  $girl-target-end
+  );
+}
