@@ -119,7 +119,7 @@
   #test8 {
     .progressBar {
       &__item {
-        &:nth-child(n) {
+        &:nth-child(-n + 8) {
 
           .progressBar__circle {
             background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);

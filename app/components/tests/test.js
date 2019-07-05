@@ -175,7 +175,10 @@ $( document ).ready(function() {
 
         $($('.finish__text-item')[1]).addClass('active').siblings().removeClass('active');
         $($('.finish__text-item')[2]).removeClass('small');
-
+        if ($(window).width() < 640) {
+            $('.finish__text-item').fadeOut();
+            $($('.finish__text-item')[4]).fadeIn();
+        }
     }
 
     function anim2() {
@@ -183,13 +186,18 @@ $( document ).ready(function() {
         $($('.finish__text-item')[2]).removeClass('small').addClass('active').siblings().removeClass('active');
         $($('.finish__text-item')[0]).addClass('small');
 
+        if ($(window).width() < 640) {
+            $('.finish__text-item').fadeOut();
+            $($('.finish__text-item')[5]).fadeIn();
+        }
+
 
     }
     function retarget() {
         quiz.hash = 'test1';
-        quiz.animation = false;
+        quiz.animation = true;
         window.localStorage.setItem('quiz', JSON.stringify(quiz));
-        window.location.href += 'result.html';
+        // window.location.href += 'result.html';
     }
 
     console.log(window.location.href);
@@ -206,9 +214,9 @@ $( document ).ready(function() {
         tl_eleven
             .fromTo('.finish__circle-path',animationP11time ,{"stroke-dashoffset":730},{"stroke-dashoffset":0, ease:Linear.easeNone})
             .to(plan, animationP11time, {score: 100, roundProps: "score", onUpdate:updateHandler, ease:Linear.easeNone}, 0)
-            .fromTo('.tl_slider',animationP11time / 3,{x:"50%"},{x: "18%", ease: SlowMo.ease.config(0.7, 0.7, false)}, 1)
-            .to('.tl_slider',animationP11time / 3,{x: "-18%", onStart:anim1, ease: SlowMo.ease.config(0.7, 0.7, false)}, animationP11time / 3)
-            .to('.tl_slider',animationP11time / 3,{x: "-33%", onStart:anim2, ease: SlowMo.ease.config(0.7, 0.7, false)}, 2 * animationP11time / 3)
+            .fromTo('.tl_slider',animationP11time / 3,{x:"35%"},{x: "-15%", ease: SlowMo.ease.config(0.7, 0.7, false)}, 1)
+            .to('.tl_slider',animationP11time / 3,{x: "-30%", onStart:anim1, ease: SlowMo.ease.config(0.7, 0.7, false)}, animationP11time / 3)
+            .to('.tl_slider',animationP11time / 3,{x: "-54%", onStart:anim2, ease: SlowMo.ease.config(0.7, 0.7, false)}, 2 * animationP11time / 3)
             .to('.q', 0, {onStart:retarget}, animationP11time + .5);
     }
 });
