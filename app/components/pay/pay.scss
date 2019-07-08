@@ -1,9 +1,17 @@
 .pay {
-  @include decorate-background('partial');
-	background-position:
-		left -647px top calc(50% - 58px),
-		right -474px top -281px,
-		right -119px bottom 8px,center top
+  background-image:
+    url("../img/Fish-img.png"),
+    url("../img/paper-img.png"),
+    url("../img/brokoli-img.png"),
+    url("../img/main-bg.jpg");
+  background-position:
+    left calc(50% - 1040px) top -16px, // fish
+    left calc(50% + 1005px) top -281px, // corn/peper
+    left calc(50% + 940px) bottom 6px, // broccoli
+    center top; // main background
+  background-repeat: no-repeat;
+  background-size: auto, auto, auto, cover;
+  background-attachment: scroll, scroll, scroll;
 }
 
 .pay__content {
@@ -13,7 +21,7 @@
 .pay__popup {
   min-height: 845px;
   margin: 183px auto 107px;
-  padding: 81px 0 0;
+  padding: 81px 15px 0;
 }
 
 .pay__target {
@@ -43,7 +51,7 @@
       background-image: url("../img/icon-pay.svg");
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: 49px 32px;
+      background-size: 100% 100%;
     }
   }
 }
@@ -90,4 +98,119 @@
 
 .female .pay__note mark {
   color: #f55064;
+}
+
+@include r(1230) {
+  .pay {
+    background-position:
+      left calc(50% - 820px) top -75px, // fish
+      left calc(50% + 885px) top -280px, // corn/peper
+      left calc(50% + 660px) bottom 6px, // broccoli
+      center top; // main background
+  }
+}
+
+@include r(1070) {
+  .pay {
+    background-image:
+      url("../img/fish__mob.png"),
+      url("../img/broccoli-mob.png"),
+      url("../img/main-bg.jpg");
+    background-position:
+      left calc(50% - 367px) top 229px, // fish
+      left calc(50% + 364px) top 147px, // broccoli
+      center top; // main background
+    background-size: 284px 306px, 97px 101px, cover;
+  }
+
+  .pay .header {
+    padding-top: 23px;
+  }
+
+  .pay .header__logo {
+    width: 107px;
+    height: 18px;
+  }
+
+  .pay__popup {
+    min-height: auto;
+    margin-top: 90px;
+    margin-bottom: 53px;
+    padding-top: 47px;
+    padding-bottom: 17px;
+  }
+
+  .pay__target {
+    top: -35px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .pay__target .half {
+    width: 59px;
+    height: 59px;
+  }
+
+  .pay__target .center {
+    width: 49px;
+    height: 49px;
+  }
+
+  .pay__target .center::after {
+    width: 18px;
+    height: 26px;
+  }
+
+  .pay__text {
+    margin-bottom: 10px;
+  }
+
+  .pay__title {
+    margin-bottom: 3px;
+  }
+
+  .pay__subtitle {
+    max-width: 210px;
+    margin: 0 auto;
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+
+  .pay__form {
+    margin-bottom: 25px;
+  }
+
+  .pay__note {
+    max-width: 290px;
+    margin: 0 auto;
+    padding-left: 88px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .pay__note img {
+    top: -4px;
+    left: 1px;
+  }
+
+  .pay__note mark {
+    display: block;
+  }
+}
+
+@include r(767) {
+  .pay {
+    background-position:
+    left -125px top 229px, // fish
+    right -28px top 147px, // broccoli
+    center top; // main background
+  }
+
+  .pay__popup {
+    margin-top: 62px;
+  }
+
+  .pay__form {
+    margin-bottom: 24px;
+  }
 }

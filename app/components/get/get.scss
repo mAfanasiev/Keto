@@ -22,12 +22,12 @@
 
 .get__background-images .peper {
   top: -474px;
-  right: calc(50% - 1425px);
+  left: calc(50% + 584px);
 }
 
 .get__background-images .broccoli {
   bottom: -7px;
-  right: calc(50% - 1071px);
+  left: calc(50% + 808px);
 }
 
 .get__popup {
@@ -115,9 +115,11 @@
 }
 
 .get__advantages {
+  position: relative;
+  z-index: 1;
   display: flex;
   max-width: 1030px;
-  margin: 0 auto 38px;
+  margin: 0 auto 36px;
   padding-bottom: 39px;
   padding-left: 4px;
   padding-right: 2px;
@@ -155,59 +157,29 @@
 }
 
 .get__secured {
-  display: flex;
-  align-items: center;
   max-width: 1030px;
-  margin: 0 auto 139px;
-  padding-left: 3px;
-  padding-right: 22px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1;
+  margin: 0 auto 140px;
 }
 
-.get__secured-images {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 1px;
-  margin-left: 49px;
-}
-
-.get__secured-images img:not(:first-of-type) {
-  margin-left: 52px;
-}
-
-.get__bottom {
-  margin-bottom: 71px;
-  background-color: white;
-}
-
-.get__bottom-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 150px;
-  padding: 0 95px 11px;
+.get__pay {
+  margin-bottom: 72px;
 }
 
 @include r(1230) {
-/*   .get__background-images .fish {
+  .get__background-images .fish {
     top: -209px;
-    left: calc(50% - 800px);
+    left: calc(50% - 1440px);
   }
   
   .get__background-images .peper {
-    display: none;
     top: -474px;
-    right: calc(50% - 700px);
+    left: calc(50% + 484px);
   }
   
   .get__background-images .broccoli {
-    display: none;
     bottom: -7px;
-    right: calc(50% - 500px);
-  } */
+    left: calc(50% + 518px);
+  }
 
   .get__buttons {
     padding: 0 30px;
@@ -219,6 +191,18 @@
 }
 
 @include r(1070) {
+  .get {
+    background-image:
+      url("../img/fish__mob.png"),
+      url("../img/broccoli-mob.png"),
+      url("../img/main-bg.jpg");
+    background-position:
+      left calc(50% - 278px) top 229px, // fish
+      left calc(50% + 274px) top 147px, // broccoli
+      center center; // main background
+    background-size: 284px 306px, 97px 101px, cover;
+  }
+
   .get .header {
     padding-top: 23px;
   }
@@ -226,6 +210,10 @@
   .get .header__logo {
     width: 107px;
     height: 18px;
+  }
+
+  .get__background-images {
+    display: none;
   }
 
   .get__popup {
@@ -292,8 +280,11 @@
 
   .get__advantages {
     display: block;
+    max-width: 550px;
+    margin: 0 auto;
     margin-bottom: 23px;
     padding: 0;
+    padding-left: 25px;
     padding-bottom: 19px;
     font-size: 18px;
     line-height: 22px;
@@ -301,13 +292,54 @@
 
   .get__advantage {
     position: relative;
-    align-items: flex-start;
-    max-width: 250px;
+    align-items: center;
     height: auto;
+  }
+
+  .get__advantage:not(:first-of-type) {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    border: none;
   }
 
   .get__advantage br {
     display: none;
+  }
+
+  .get__advantage-icon {
+    margin-right: 17px;
+  }
+
+  .get__pay {
+    margin-bottom: 43px;
+  }
+
+  .get__secured {
+    margin: 0 auto 35px;
+  }
+}
+
+@include r(767) {
+
+}
+
+@include r(639) {
+  .get {
+    background-position:
+      left calc(50% - 223px) top 229px, // fish
+      left calc(50% + 220px) top 147px, // broccoli
+      center center; // main background
+  }
+
+  .get__advantages {
+    max-width: 440px;
+    margin: 0 auto 23px;
+    padding-left: 10px;
+  }
+
+  .get__advantage {
+    align-items: flex-start;
   }
 
   .get__advantage:first-of-type {
@@ -322,40 +354,24 @@
     border: none;
   }
 
-  .get__advantage-icon {
-    margin-right: 17px;
-  }
-
   .get__secured {
-    display: block;
-    margin-bottom: 22px;
-    padding: 0;
+    max-width: 280px;
+  }
+}
+
+@include r(479) {
+  .get {
+    background-position:
+      left calc(50% - 143px) top 229px, // fish
+      left calc(50% + 140px) top 147px, // broccoli
+      center center; // main background
   }
 
-  .get__secured-images {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 276px;
-    margin-top: 2px;
-    margin-left: 2px;
+  .get__advantages {
+    padding-left: 0;
   }
 
-  .get__secured-images img,
-  .get__secured-images img:not(:first-of-type) {
-    margin-top: 20px;
-    margin-left: 0;
-  }
-
-  .get__bottom-wrapper {
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .get__bottom .visa {
-    max-width: 79px;
-  }
-
-  .get__bottom .master-card {
-    max-width: 49px;
+  .get__advantage {
+    max-width: 250px;
   }
 }

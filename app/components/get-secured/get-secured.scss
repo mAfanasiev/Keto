@@ -1,0 +1,115 @@
+.get-secured {
+  display: flex;
+  align-items: center;
+}
+
+.get-secured__title {
+  margin-top: 5px;
+  padding-left: 2px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.get-secured__images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.get-secured__images .https {
+  margin-top: 4px;
+  margin-left: 50px;
+}
+
+.get-secured__images .ssl {
+  margin-top: 4px;
+  margin-left: 52px;
+}
+
+.get-secured__images .mcafee {
+  margin-top: 3px;
+  margin-left: 53px;
+}
+
+.get-secured__images .norton {
+  margin-left: 51px;
+}
+
+.get-secured__images .paypal {
+  margin-top: 1px;
+  margin-left: 53px;
+}
+
+@include r(1070) {
+  .get-secured {
+    display: block;
+    padding: 0;
+  }
+
+  .get-secured__title {
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  .get-secured__images {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .get-secured__images .https,
+  .get-secured__images .ssl,
+  .get-secured__images .mcafee,
+  .get-secured__images .norton,
+  .get-secured__images .paypal {
+    margin: 0;
+  }
+
+  .get-secured__images .paypal {
+    max-width: 115px;
+  }
+}
+
+@include r(639) {
+  .get-secured__images {
+    align-items: flex-start;
+  }
+
+  .get-secured__images {
+    margin-top: 18px;
+  }
+
+  .get-secured__images .https {
+    margin-left: 2px;
+  }
+  
+  .get-secured__images .ssl {
+    margin-left: 52px;
+  }
+  
+  .get-secured__images .mcafee {
+    margin-top: 20px;
+    margin-left: 3px;
+  }
+  
+  .get-secured__images .norton {
+    margin-top: 17px;
+    margin-left: 51px;
+  }
+  
+  .get-secured__images .paypal {
+    margin-top: 17px;
+    margin-left: 1px;
+  }
+}
+
+@include r(479) {
+  .get-secured__title {
+    text-align: left;
+  }
+
+  .get-secured__images {
+    justify-content: flex-start;
+  }
+}

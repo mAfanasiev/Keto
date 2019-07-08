@@ -5,4 +5,6 @@
 //=include ../components/get/get.js
 //=include ../components/pay-form/pay-form.js
 //=include ../components/faq/faq.js
+//=include ../components/diet/diet.js
+//=include ../components/calendar/calendar.js
 //=include ../components/footer/footer.js

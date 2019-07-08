@@ -65,6 +65,7 @@
 
 .pay-form__info-icons {
   display: flex;
+  align-items: center;
   margin-left: auto;
 
   & img + img {
@@ -79,6 +80,15 @@
   padding: 18px 19px 20px;
 }
 
+.pay-form__field {
+  width: 100%;
+  max-width: 430px;
+
+  &--half {
+    max-width: 205px;
+  }
+}
+
 .pay-form__label {
   display: block;
   margin-bottom: 8px;
@@ -86,7 +96,7 @@
 
 .pay-form__input {
   display: block;
-  width: 205px;
+  width: 100%;
   height: 45px;
   padding: 0 16px;
   background: none;
@@ -99,7 +109,6 @@
   }
 
   &--number {
-    width: 430px;
     margin-bottom: 18px;
   }
 
@@ -113,7 +122,8 @@
 .pay-form__button {
   display: block;
   width: 100%;
-  margin: 0;
+  max-width: 470px;
+  margin: 0 auto;
   padding: 0;
   color: white;
   font: inherit;
@@ -125,5 +135,105 @@
 
   .pay-form__button:disabled {
     background-color: #d8dada;
+  }
+}
+
+@include r(1070) {
+  .pay-form {
+    margin-bottom: 0;
+    padding: 21px 0 20px;
+  }
+
+  .pay-form__top {
+    margin-bottom: 18px;
+    padding: 0 15px;
+  }
+  
+  .pay-form__value {
+    font-size: 26px;
+  }
+
+  .pay-form__value-subtitle {
+    max-width: 80px;
+    margin-left: auto;
+    margin-right: 3px;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  .pay-form__info {
+    padding-left: 14px;
+    padding-right: 14px;
+    border-top: 1px solid #d8dada;
+  }
+
+  .pay-form__info::before {
+    margin-right: 9px;
+  }
+
+  .pay-form__info-text {
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .pay-form__info-icons img + img {
+    margin-left: 20px;
+  }
+
+  .pay-form__fieldset {
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .pay-form__fields {
+    padding: 20px 25px 0;
+  }
+
+  .pay-form__field {
+    max-width: 470px;
+    margin-bottom: 14px;
+  }
+
+  .pay-form__field--half {
+    max-width: 225px;
+  }
+
+  .pay-form__label {
+    font-size: 13px;
+  }
+
+  .pay-form__input--number {
+    margin-bottom: 0;
+  }
+}
+
+@include r(639) {
+  .pay-form__fields {
+    padding: 20px 14px 0;
+  }
+
+  .pay-form__field--half {
+    max-width: 185px;
+  }
+
+  .pay-form__button {
+    max-width: calc(100% - 30px);
+    margin-top: 2px;
+  }
+}
+
+@include r(479) {
+  .pay-form__info {
+    flex-wrap: wrap;
+  }
+
+  .pay-form__info-icons {
+    width: 100%;
+    margin-top: 13px;
+    margin-left: 0;
+  }
+
+  .pay-form__field--half {
+    max-width: 100%;
   }
 }
