@@ -19,14 +19,8 @@
 }
 
 .subscribe__popup {
-  position: relative;
-  width: 100%;
-  max-width: 1030px;
-  min-height: 530px;
   margin: 183px auto 324px;
-  padding: 81px 0 0;
-  color: white;
-  @include popup-bg();
+  padding: 81px 0 50px;
 }
 
 .subscribe__target {
@@ -164,7 +158,6 @@
   }
 
   .subscribe__popup {
-    max-width: 800px;
     margin-top: 90px;
     margin-bottom: 150px;
   }
@@ -182,6 +175,7 @@
       center top; // main background
     background-size: 284px 306px, 97px 101px, cover;
   }
+  
   .subscribe .header {
     padding-top: 23px;
   }
@@ -192,8 +186,6 @@
   }
 
   .subscribe__popup {
-    max-width: 550px;
-    min-height: auto;
     margin-top: 62px;
     margin-bottom: 40px;
     padding-top: 46px;

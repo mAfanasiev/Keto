@@ -1,16 +1,19 @@
 .pay {
+  @include decorate-background('partial');
+	background-position:
+		left -647px top calc(50% - 58px),
+		right -474px top -281px,
+		right -119px bottom 8px,center top
+}
+
+.pay__content {
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .pay__popup {
-  position: relative;
-  width: 100%;
-  max-width: 1030px;
   min-height: 845px;
   margin: 183px auto 107px;
   padding: 81px 0 0;
-  color: white;
-  @include popup-bg();
 }
 
 .pay__target {

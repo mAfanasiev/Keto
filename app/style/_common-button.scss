@@ -1,6 +1,7 @@
 .common-button {
   position: relative;
   display: block;
+  flex-shrink: 0;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 

@@ -1,4 +1,5 @@
 .price {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -12,6 +13,16 @@
   & .currency {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 400;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 9px);
+    left: 50%;
+    height: 65px;
+    border-left: 1px solid #545e6a;
+    transform: translate(-50%, -50%)
   }
 }
 
@@ -81,5 +92,63 @@
     right: 14px;
     color: white;
     font-size: 18px;
+  }
+}
+
+@include r(1070) {
+  .price::after {
+    height: 45px;
+    top: 50%;
+  }
+
+  .price__old .value,
+  .price__current .value {
+    font-size: 60px;
+  }
+
+  .price__old .float,
+  .price__current .float {
+    font-size: 20px;
+  }
+
+  .price__old .currency,
+  .price__current .currency {
+    font-size: 14px;
+  }
+
+  .price__old {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 24px;
+    font-weight: 100;
+  }
+
+  .price__old::after {
+    width: 127px;
+    transform: rotate(19deg);
+  }
+
+  .price__old .float {
+    top: 5px;
+    left: -1px;
+  }
+
+  .price__old .currency {
+    bottom: 6px;
+    right: -3px;
+  }
+
+  .price__current {
+    margin-left: 9px;
+  }
+
+  .price__current .float {
+    top: 6px;
+    left: 5px;
+  }
+
+  .price__current .currency {
+    bottom: 6px;
+    right: -8px;
   }
 }
