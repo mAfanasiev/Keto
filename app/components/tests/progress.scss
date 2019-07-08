@@ -60,6 +60,8 @@
     align-items: flex-start;
   }
   &__circle {
+    pointer-events: none;
+    cursor: pointer;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -70,8 +72,13 @@
     border-radius: 50%;
     position: relative;
     z-index: 3;
+    &:hover {
+      & + .progressBar__text {
+        text-decoration: underline;
+      }
+    }
   }
-  &__text {
+  &__text  {
     opacity: 0.4;
     color: #ffffff;
     font-size: 15px;
@@ -110,6 +117,11 @@
       width: calc(130px);
     }
     &__item {
+      &:nth-child(-n + 1) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 2) {
         .progressBar__text {
           opacity: 1;
@@ -131,6 +143,11 @@
       width: calc(270px);
     }
     &__item {
+      &:nth-child(-n + 2) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 3) {
         .progressBar__text {
           opacity: 1;
@@ -152,6 +169,11 @@
       width: calc(390px);
     }
     &__item {
+      &:nth-child(-n + 3) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 4) {
         .progressBar__text {
           opacity: 1;
@@ -173,6 +195,11 @@
       width: calc(520px);
     }
     &__item {
+      &:nth-child(-n + 4) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 5) {
         .progressBar__text {
           opacity: 1;
@@ -194,6 +221,11 @@
       width: calc(640px);
     }
     &__item {
+      &:nth-child(-n + 5) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 6) {
         .progressBar__text {
           opacity: 1;
@@ -215,6 +247,11 @@
       width: calc(780px);
     }
     &__item {
+      &:nth-child(-n + 6) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 7) {
         .progressBar__text {
           opacity: 1;
@@ -246,6 +283,11 @@
         .progressBar__ico {
           opacity: 1;
           fill: #27cda2;
+        }
+        &:nth-child(-n + 7) {
+          .progressBar__circle {
+            pointer-events: visible;
+          }
         }
       }
     }

@@ -53,7 +53,11 @@ body.result {
 		left -118px bottom 27px, // lime #bottom
 		center top; // main background
 }
-
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 body.get {
 	background-image: url("../img/result-bg.jpg");
 	background-position: center center;

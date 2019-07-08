@@ -1,0 +1,16 @@
+.recept {
+  position: relative;
+  &::before {
+    content: '';
+    width: 1px;
+    height: 500px;
+    background-image: repeating-linear-gradient(to bottom,
+            #545e6a,
+            #545e6a 5px,
+            transparent 5px,
+            transparent 10px);
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+}

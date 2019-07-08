@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    // если нужно что бы все елементы были выбраны нужно в обьекте tests все масивы заполнить цыфрами от 0 до количества елементов в тесте минус 1
     var quiz = {
         hash:'test1',
         animation: false,
@@ -99,6 +99,10 @@ $( document ).ready(function() {
         prevScreen(this, $(this).data('prev'));
     });
 
+    $('.progressBar__circle').click(function () {
+        prevScreen(this, $(this).data('prev'));
+    });
+
     $('.test__item--js').click( function (e) {
         quiz.gender = e.target.parentNode.id;
         quiz.hash = 'test2';
@@ -129,6 +133,14 @@ $( document ).ready(function() {
 
     $('section #test7 .test__next').click(function () {
         validate('test7', 'test__content-item', 'test8', this);
+    });
+
+    $('.test__content-item--js').click(function () {
+        $('.test__content-item--last').removeClass('active');
+    });
+
+    $('.test__content-item--last').click(function () {
+       $(this).siblings().removeClass('active');
     });
 
     $('.test__tabs-item').click(function () {
@@ -195,7 +207,6 @@ $( document ).ready(function() {
     }
     function retarget() {
         quiz.hash = 'test1';
-        quiz.animation = true;
         window.localStorage.setItem('quiz', JSON.stringify(quiz));
         // window.location.href += 'result.html';
     }

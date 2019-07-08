@@ -144,7 +144,7 @@
         font-weight: 500;
       }
       & .faq__item-open {
-        background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+        background-image: linear-gradient(to right,#27cda2,#76e5c8);
         &::before {
           opacity: 1;
         }
@@ -169,7 +169,7 @@
     height: 60px;
     border-radius: 29px;
     background-color: #2e3844;
-    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+    background-image: linear-gradient(to right,#27cda2,#76e5c8);
     position: relative;
     &::before {
       content: '';
@@ -181,6 +181,219 @@
       transform: translateY(-50%);
       background-image: url('../img/back__arrow.svg');
       background-repeat: no-repeat;
+    }
+  }
+}
+
+.female {
+  .faq, .general {
+    & .faq__top-circle {
+      background-image: linear-gradient(to left,#fb8768 0%,#f54d64 100%);
+    }
+
+    & .faq__back {
+      background-image: linear-gradient(to left,#fb8768 0%,#f54d64 100%);
+    }
+    & .faq__item.active .faq__item-open {
+      background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+    }
+  }
+}
+
+@include r(1070) {
+  .faq {
+    &__content {
+      margin-top: 120px;
+      margin-bottom: 80px;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-bottom: 30px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__answer {
+      margin-top: 30px;
+    }
+    &__item {
+      &-text {
+        padding-right: 30px;
+      }
+    }
+    &__back {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include r(1070) {
+  .faq {
+    &__content {
+      margin-top: 120px;
+      margin-bottom: 80px;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-bottom: 30px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__answer {
+      margin-top: 30px;
+    }
+    &__item {
+      &-text {
+        padding-right: 30px;
+      }
+    }
+    &__back {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include r(767) {
+  .faq {
+    &__content {
+      margin-top: 100px;
+      margin-bottom: 60px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 30px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    &__answer {
+      margin-top: 20px;
+    }
+    &__item {
+      &-text {
+        padding-right: 30px;
+      }
+    }
+    &__back {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include r(639) {
+  .faq {
+    &__content {
+      margin-top: 90px;
+      margin-bottom: 60px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 30px;
+    }
+    &__top {
+      width: 90px;
+      height: 90px;
+      top: -45px;
+      &-circle {
+        &--2 {
+          width: 70px;
+          height: 70px;
+        }
+        &--3 {
+          width: 50px;
+          height: 50px;
+          & img {
+            width: 21px;
+          }
+        }
+      }
+    }
+    &__title {
+      margin-top: -30px;
+      font-size: 24px;
+    }
+
+    &__item {
+      &-text {
+        padding-right: 30px;
+      }
+      &-open {
+        flex-shrink: 0;
+      }
+    }
+    &__back {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include r(479) {
+  .faq {
+    &__content {
+      margin-top: 65px;
+      margin-bottom: 50px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 20px;
+    }
+    &__top {
+      width: 72px;
+      height: 72px;
+      top: -35px;
+      &-circle {
+        &--2 {
+          width: 60px;
+          height: 60px;
+        }
+        &--3 {
+          width: 50px;
+          height: 50px;
+          & img {
+            width: 21px;
+          }
+        }
+      }
+    }
+    &__title {
+      margin-top: -25px;
+      font-size: 24px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__answer {
+      margin-top: 10px;
+    }
+    &__item {
+      margin-bottom: 10px;
+      padding-left: 15px;
+      &.active {
+        padding-bottom: 15px;
+      }
+      &-title {
+        font-size: 16px;
+      }
+      &-text {
+        font-size: 16px;
+        padding-right: 0px;
+      }
+      &-open {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-left: 15px;
+        &::before {
+          width: 12px;
+        }
+        &::after {
+          height: 12px;
+        }
+      }
+    }
+    &__back {
+      margin-top: 20px;
     }
   }
 }
