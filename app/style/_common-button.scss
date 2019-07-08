@@ -1,6 +1,7 @@
 .common-button {
   position: relative;
   display: block;
+  flex-shrink: 0;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 
@@ -77,4 +78,22 @@
     $girl-target-start,
     $girl-target-end
   );
+}
+
+@include r(1070) {
+  .common-button--lg {
+    width: 280px;
+    height: 60px;
+    padding: 0 37px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+
+  .common-button--lg::after {
+    top: calc(50% - 1px);
+    right: 41px;
+    width: 23px;
+    height: 20px;
+    background-image: url("../img/main-button-arrow-02.svg");;
+  }
 }

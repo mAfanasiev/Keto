@@ -41,20 +41,22 @@
     &-main {
       position: absolute;
       height: 100%;
-      width: 5000px;
+      //width: 5000px;
+      width: auto;
       top: 0;
-      right: calc(50% - 5114px);
+      //right: calc(50% - 5114px);
+      right: 0;
       background-color: transparentize(#121920, 0.03);
       z-index: 10;
       display: none;
 
     }
     &-list {
-      width: 470px;
+      width: 420px;
       position: relative;
       padding-top: 137px;
-      padding-left: 68px;
-      padding-right: 70px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
     &-item {
       width: 100%;
@@ -104,7 +106,7 @@
       cursor: pointer;
       position: absolute;
       top: 47px;
-      right: 0;
+      right: 40px;
       & path {
         fill: url("#man");
       }
@@ -132,19 +134,18 @@
 
     &__menu {
 
-      &-main {
-        right: calc(50% - 5035px);
-      }
+
 
       &-close {
         top: 42px;
+        right: 30px;
       }
 
       &-list {
-        width: 325px;
+        width: 340px;
         padding-top: 80px;
-        padding-left: 20px;
-        padding-right: 24px;
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
       &-social {
@@ -158,12 +159,6 @@
   .header {
     padding-top: 40px;
 
-    &__menu {
-
-      &-main {
-        right: calc(50% - 4970px);
-      }
-    }
   }
 }
 
@@ -171,12 +166,7 @@
   .header {
     padding-top: 40px;
 
-    &__menu {
 
-      &-main {
-        right: calc(50% - 4890px);
-      }
-    }
   }
 }
 @include r(479) {

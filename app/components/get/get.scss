@@ -1,40 +1,38 @@
 .get {
+  background-image: url("../img/main-bg.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.get__content {
   position: relative;
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.get__background-images {
-  & img {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-  }
+.get__background-images img {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
 
-  & .fish {
-    top: -209px;
-    left: calc(50% - 1600px);
-  }
+.get__background-images .fish {
+  top: -209px;
+  left: calc(50% - 1600px);
+}
 
-  .peper {
-    top: -474px;
-    right: calc(50% - 1425px);
-  }
+.get__background-images .peper {
+  top: -474px;
+  right: calc(50% - 1425px);
+}
 
-  .broccoli {
-    bottom: -7px;
-    right: calc(50% - 1071px);
-  }
+.get__background-images .broccoli {
+  bottom: -7px;
+  right: calc(50% - 1071px);
 }
 
 .get__popup {
-  position: relative;
-  width: 100%;
-  max-width: 1030px;
-  min-height: 580px;
   margin: 123px auto 42px;
-  padding: 64px 0 0;
-  color: white;
-  @include popup-bg();
+  padding: 64px 0 70px;
 }
 
 .get__body {
@@ -76,16 +74,6 @@
 .get__price {
   position: relative;
   margin-bottom: 33px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(50% + 9px);
-    left: 50%;
-    height: 65px;
-    border-left: 1px solid #2e3844;
-    transform: translate(-50%, -50%)
-  }
 }
 
 .get__buttons {
@@ -169,7 +157,6 @@
 .get__secured {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   max-width: 1030px;
   margin: 0 auto 139px;
   padding-left: 3px;
@@ -178,10 +165,17 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1;
+}
 
-  & img {
-    margin-top: -1px;
-  }
+.get__secured-images {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1px;
+  margin-left: 49px;
+}
+
+.get__secured-images img:not(:first-of-type) {
+  margin-left: 52px;
 }
 
 .get__bottom {
@@ -195,4 +189,173 @@
   align-items: center;
   height: 150px;
   padding: 0 95px 11px;
+}
+
+@include r(1230) {
+/*   .get__background-images .fish {
+    top: -209px;
+    left: calc(50% - 800px);
+  }
+  
+  .get__background-images .peper {
+    display: none;
+    top: -474px;
+    right: calc(50% - 700px);
+  }
+  
+  .get__background-images .broccoli {
+    display: none;
+    bottom: -7px;
+    right: calc(50% - 500px);
+  } */
+
+  .get__buttons {
+    padding: 0 30px;
+  }
+
+  .get__button {
+    width: 355px;
+  }
+}
+
+@include r(1070) {
+  .get .header {
+    padding-top: 23px;
+  }
+
+  .get .header__logo {
+    width: 107px;
+    height: 18px;
+  }
+
+  .get__popup {
+    margin-top: 42px;
+    margin-bottom: 26px;
+    padding: 28px 15px 30px;
+  }
+
+  .get__title {
+    margin-bottom: 9px;
+  }
+
+  .get__text {
+    margin-bottom: 20px;
+  }
+
+  .get__rate {
+    display: block;
+    height: 86px;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+
+  .get__rate .stars {
+    margin-bottom: 13px;
+  }
+
+  .get__rate span {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+
+  .get__price {
+    margin-bottom: 16px;
+  }
+
+  .get__buttons {
+    display: block;
+    padding: 0;
+  }
+
+  .get__button {
+    width: 250px;
+    margin: 0 auto;
+    padding-left: 25px;
+  }
+
+  .get__button--card::after {
+    right: 26px;
+  }
+
+  .get__button--paypal {
+    padding-left: 13px;
+  }
+
+  .get__button--paypal::after {
+    right: 13px;
+  }
+
+  .get__button + .get__button {
+    margin-top: 15px;
+  }
+
+  .get__advantages {
+    display: block;
+    margin-bottom: 23px;
+    padding: 0;
+    padding-bottom: 19px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .get__advantage {
+    position: relative;
+    align-items: flex-start;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .get__advantage br {
+    display: none;
+  }
+
+  .get__advantage:first-of-type {
+    align-items: center;
+    margin: 0;
+  }
+
+  .get__advantage:not(:first-of-type) {
+    margin: 0;
+    margin-top: 23px;
+    padding: 0;
+    border: none;
+  }
+
+  .get__advantage-icon {
+    margin-right: 17px;
+  }
+
+  .get__secured {
+    display: block;
+    margin-bottom: 22px;
+    padding: 0;
+  }
+
+  .get__secured-images {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 276px;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+
+  .get__secured-images img,
+  .get__secured-images img:not(:first-of-type) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .get__bottom-wrapper {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .get__bottom .visa {
+    max-width: 79px;
+  }
+
+  .get__bottom .master-card {
+    max-width: 49px;
+  }
 }

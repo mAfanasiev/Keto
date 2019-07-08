@@ -8,12 +8,9 @@ $(document).ready(function () {
   } else {
     document.querySelector('body').classList.add('male');
   }
+
+  $('.subscribe__form').submit(function(submitEvent) {
+    submitEvent.preventDefault();
+    window.location.href = "get.html";
+  });
 });
-
-// $(function () {
-//   var $input = $('.popup__input[type="email"]');
-
-//   $input.on('keyup input', function () {
-//     console.log(true)
-//   });
-// });

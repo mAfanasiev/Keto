@@ -1,0 +1,23 @@
+.result-resume__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@include r(1230) {
+  .result-resume__cards {
+    justify-content: center;
+  }
+}
+
+@include r(767) {
+  .result-resume__cards {
+    justify-content: space-between;
+  }
+}
+
+@include r(639) {
+  .result-resume__cards {
+    display: block;
+  }
+}

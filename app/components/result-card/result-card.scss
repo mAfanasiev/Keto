@@ -1,0 +1,194 @@
+.result-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  height: 450px;
+  margin: 15px 0;
+  padding: 0 19px;
+  color: white;
+  background-color: transparentize(#2e3844, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.result-card__about-show {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  right: 25px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 25px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #545e6a;
+  cursor: pointer;
+  transition: inherit;
+}
+
+.result-card__about {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 100px 20px;
+  font-size: 14px;
+  line-height: (24 / 14);
+  text-align: center;
+  opacity: 0;
+  transition: inherit;
+}
+
+.result-card__main {
+  transition: inherit;
+}
+
+.result-card__top {
+  padding-top: 34px;
+  padding-left: 9px;
+  padding-right: 120px;
+}
+
+.result-card__title {
+  $line-height: (30 / 25);
+  min-height: ($line-height * 2) + em;
+  font-size: 25px;
+  line-height: $line-height;
+}
+
+.result-card__popup {
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  right: 50px;
+  display: none;
+  padding: 10px;
+  background-color: white;
+}
+
+.result-card__body {
+  position: relative;
+  height: 234px;
+}
+
+.result-card__bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  // padding-bottom: 32px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.result-card__subtitle {
+  $line-height: (30 / 18);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: ($line-height * 2) + em;
+  margin-bottom: 5px;
+  color: transparentize(white, 0.3);
+  font-size: 18px;
+  line-height: $line-height;
+}
+
+.result-card__result {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.result-card--about {
+  & .result-card__about-show {
+    background-color: #2ccda4;
+  }
+
+  & .result-card__main {
+    opacity: 0;
+  }
+
+  & .result-card__about {
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+@include r(1230) {
+  .result-card {
+    margin: 15px;
+  }
+}
+
+@include r(1070) {
+  .result-card {
+    max-width: 280px;
+    height: 350px;
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  .result-card__about-show {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .result-card__about {
+    display: block;
+    padding: 80px 15px 15px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .result-card__top {
+    padding-top: 22px;
+    padding-left: 8px;
+  }
+
+  .result-card__title {
+    font-size: 20px;
+  }
+
+  .result-card__body {
+    height: 191px;
+  }
+
+  .result-card__subtitle {
+    $line-height: (22 / 18);
+    margin-bottom: 5px;
+    min-height: ($line-height * 2) + em;
+    line-height: $line-height;
+  }
+}
+
+@include r(639) {
+  .result-card {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@import "./card-bmi";
+@import "./card-age";
+@import "./card-calories";
+@import "./card-water";
+@import "./card-weight";
+@import "./card-keto";

@@ -1,4 +1,26 @@
 .result {
+  background-image:
+    url("../img/lime-img.png"),
+    url("../img/brokoli-img.png"),
+    url("../img/paper-img.png"),
+    url("../img/Fish-img.png"),
+    url("../img/brokoli-img.png"),
+    url("../img/lime-img.png"),
+    url("../img/result-bg.jpg");
+  background-position:
+    left calc(50% - 147px) top -74px, // lime #top
+    left calc(50% - 913px) top 87px, // broccoli #top
+    left calc(50% + 1093px) top -281px, // corn/peper
+    left calc(50% - 1146px) top calc(50% - 18px), // fish
+    left calc(50% + 1019px) bottom 566px, // broccoli #bottom
+    left calc(50% - 925px) bottom 24px, // lime #bottom
+    center top; // main background
+  background-repeat: no-repeat;
+  background-size: auto, auto, auto, auto, auto, auto, cover;
+  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
+}
+
+.result__content {
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
 }
 
@@ -18,7 +40,6 @@
 
 .result__message {
   position: relative;
-  left: -5px;
   margin-bottom: 61px;
   color: white;
   font-size: 60px;
@@ -28,17 +49,17 @@
 
 .result__phone {
   position: relative;
-  right: -21px;
+  right: -37px;
   flex-grow: 1;
-  max-width: 540px;
+  width: 540px;
   margin-top: 89px;
+}
 
-  & img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    margin: 0 auto;
-  }
+.result__phone-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
 }
 
 .result__target {
@@ -103,8 +124,192 @@
 }
 
 .result__resume {
-  padding-top: 112px;
+  padding-top: 82px;
 }
 
-@import './resume';
-@import "./about";
+.result__title {
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  font-size: 40px;
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: (45 / 40);
+  text-align: center;
+
+  &--resume {
+    margin-top: 30px;
+    margin-bottom: 58px;
+  }
+
+  &--about {
+    margin-bottom: 53px;
+  }
+}
+
+.result__resume {
+  margin-bottom: 96px;
+}
+
+@include r(1230) {
+  .result {
+    background-position:
+      left calc(50% - 147px) top -74px,
+      left calc(50% - 613px) top 87px,
+      left calc(50% + 883px) top -281px,
+      left calc(50% - 846px) top calc(50% - 18px),
+      left calc(50% + 639px) bottom 566px,
+      left calc(50% - 625px) bottom 24px,
+      center top;
+  }
+  .result__phone {
+    right: 0;
+    width: 405px;
+    height: auto;
+    margin-top: auto;
+  }
+
+  .result__phone-img {
+    width: 220px;
+  }
+
+  .result__target {
+    width: 405px;
+    height: 405px;
+  }
+
+  .result__target .half {
+    width: 335px;
+    height: 335px;
+  }
+
+  .result__target .center {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@include r(1070) {
+  .result {
+    background-image:
+      url("../img/fish__mob.png"),
+      url("../img/broccoli-mob.png"),
+      url("../img/result-bg.jpg");
+    background-position:
+      left -125px top 426px, // fish
+      right -28px top 97px, // broccoli
+      center top; // main background
+    background-size: 284px 306px, 97px 101px, auto 100%;
+  }
+
+  .result .header {
+    padding-top: 23px;
+  }
+
+  .result .header__logo {
+    width: 107px;
+    height: 18px;
+  }
+
+  .result__top {
+    padding-bottom: 40px;
+  }
+
+  .result__text {
+    align-self: center;
+    max-width: 450px;
+    padding-top: 0;
+  }
+
+  .result__message {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: (30 / 28);
+  }
+
+  .result__phone {
+    width: 270px;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .result__phone-img {
+    width: 150px;
+  }
+
+  .result__target {
+    width: 270px;
+    height: 270px;
+  }
+
+  .result__target .half {
+    width: 225px;
+    height: 225px;
+  }
+
+  .result__target .center {
+    width: 190px;
+    height: 190px;
+  }
+
+  .result__scroll {
+    display: none;
+  }
+
+  .result__resume,
+  .result__about {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .result__resume {
+    margin: 0 auto 37px;
+    padding-top: 38px;
+  }
+
+  .result__title {
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .result__title--resume {
+    margin-bottom: 26px;
+  }
+
+  .result__title--about {
+    margin-bottom: 25px;
+  }
+
+  .result__about {
+    margin: 0 auto;
+  }
+}
+
+@include r(767) {
+  .result__text {
+    padding-top: 39px;
+  }
+
+  .result__phone {
+    display: none;
+  }
+
+  .result__resume {
+    max-width: 600px;
+  }
+}
+
+@include r(639) {
+  .result__text,
+  .result__resume,
+  .result__about {
+    max-width: 280px;
+  }
+}
+
+@include r(479) {
+  .result__title--resume {
+    text-align: left;
+  }
+}

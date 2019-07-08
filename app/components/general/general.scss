@@ -32,7 +32,7 @@
       width: 50px;
       height: 50px;
       background-color: #2e3844;
-      background-image: linear-gradient(to right,#27cda2,#76e5c8);
+      background-image: linear-gradient(to right,$grad-start,$grad-end);
       color: #ffffff;
       font-family: Montserrat;
       font-size: 28px;
@@ -49,6 +49,9 @@
       font-weight: 400;
       line-height: 22px;
       margin-bottom: 22px;
+      &--pl {
+        padding-left: 17px;
+      }
       &:last-child {
         margin-bottom: 0;
       }

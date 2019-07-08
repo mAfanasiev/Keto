@@ -1,3 +1,12 @@
+.popup {
+  position: relative;
+  width: 100%;
+  max-width: 1030px;
+  color: white;
+  background-color: transparentize(#2e3844, 0.4);
+  border-radius: 5px;
+}
+
 .popup__title {
   font-size: 40px;
   font-weight: 500;
@@ -23,20 +32,6 @@
 
 .popup__field {
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 32px;
-    width: 30px;
-    height: 20px;
-    background-image: url("../img/subscribe-email-icon.svg");
-    background-position: center center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
 }
 
 .popup__input {
@@ -58,5 +53,90 @@
 
   &:focus::placeholder {
     color: $transparent;
+  }
+}
+
+.popup__input--email {
+  padding: 0 80px;
+}
+
+.popup__field .icon {
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+.popup__field .icon-invalid {
+  fill: #ffffff;
+}
+
+.popup__field .icon-valid {
+  opacity: 0;
+}
+
+.popup__field .icon-valid,
+.male .popup__field .icon-valid {
+  fill: url("#man");
+}
+
+.female .popup__field .icon-valid {
+  fill: url("#woman");
+}
+
+.icon--email {
+  top: 20px;
+  left: 32px;
+  width: 30px;
+  height: 20px;
+  background-image: url("../img/subscribe-email-icon.svg");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.popup__input:valid ~ .icon-valid {
+  opacity: 1;
+}
+
+@include r(1230) {
+  .popup {
+    max-width: 800px;
+  }
+}
+
+@include r(1070) {
+  .popup {
+    max-width: 550px;
+    min-height: auto;
+  }
+
+  .popup__title {
+    font-size: 24px;
+  }
+
+  .popup__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .popup__input {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .popup__input--email {
+    padding: 0 53px;
+  }
+
+  .popup__input--email::placeholder {
+    position: relative;
+    top: -1px;
+  }
+
+  .icon--email {
+    top: 16px;
+    left: 20px;
+    width: 24px;
+    height: 16px;
   }
 }

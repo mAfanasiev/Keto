@@ -1,13 +1,13 @@
-<section class="result">
+<section class="result__content">
   <div class="result__wrapper wrapper">
     <div class="result__top">
       <div class="result__text">
-        <p class="result__message">Ваша персональная 60-дневная кетодиета готова</p>
-        <a href="#" class="result__button common-button common-button--lg">Получить сейчас</a>
+        <p class="result__message">Ваша персональная <span class="text-nowrap">60-дневная</span> кетодиета готова</p>
+        <a href="subscribe.html" class="result__button common-button common-button--lg">Получить сейчас</a>
       </div>
       <button class="result__scroll" type="button"></button>
       <div class="result__phone">
-        <img src="img/phone.png" alt="">
+        <img src="img/phone.png" alt="" class="result__phone-img">
         <span class="decorate-target result__target">
           <div class="half">
             <div class="center"></div>
@@ -16,10 +16,12 @@
       </div>
     </div>
     <div class="result__resume">
-      <!--=include ./resume.html -->
+      <h2 class="result__title result__title--resume">Резюме <br>вашего профиля</h2>
+      <!--=include ../result-resume/result-resume.html -->
     </div>
     <div class="result__about">
-        <!--=include ./about.html -->
+      <h2 class="result__title result__title--about">Что вы получаете</h2>
+        <!--=include ../result-about/result-about.html -->
     </div>
   </div>
 </section>

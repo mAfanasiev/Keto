@@ -1,0 +1,43 @@
+.card-keto__body {
+  & .picture {
+    display: block;
+    height: 210px;
+    margin: 0 auto;
+    padding-top: 28px;
+  }
+
+  & #carbs {
+    // display: none;
+  }
+
+  & #proteins {
+    display: none;
+  }
+
+  & #fats {
+    display: none;
+  }
+
+  & .value {
+    font-size: 60px;
+    line-height: 1;
+    fill: white;
+  }
+
+  & .unit {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    fill: #82888f;
+  }
+}
+
+@include r(1070) {
+  .card-keto__body {
+    margin-bottom: 22px;
+  }
+
+  .card-keto__body .picture {
+    max-width: 145px;
+    padding-top: 0;
+  }
+}

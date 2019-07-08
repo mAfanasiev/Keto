@@ -26,7 +26,7 @@
     align-items: center;
     &-circle {
       border-radius: 50%;
-      background-image: linear-gradient(to left,#76e5c8 0%,#27cda2 100%);
+      background-image: linear-gradient(to left,$grad-start 0%,$grad-end 100%);
       &--1, &--2 {
         opacity: 0.15;
         position: absolute;
@@ -144,7 +144,7 @@
         font-weight: 500;
       }
       & .faq__item-open {
-        background-image: linear-gradient(to right,#27cda2,#76e5c8);
+        background-image: linear-gradient(to right,$grad-end,$grad-start);
         &::before {
           opacity: 1;
         }
@@ -169,7 +169,7 @@
     height: 60px;
     border-radius: 29px;
     background-color: #2e3844;
-    background-image: linear-gradient(to right,#27cda2,#76e5c8);
+    background-image: linear-gradient(to right,$grad-end,$grad-start);
     position: relative;
     &::before {
       content: '';
