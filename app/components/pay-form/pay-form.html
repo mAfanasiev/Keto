@@ -1,4 +1,4 @@
-<form action="/" class="pay-form">
+<form class="pay-form" onsubmit="return false">
   <div class="pay-form__top">
     <div class="pay-form__payment">
       <div class="pay-form__value">
@@ -9,7 +9,7 @@
   </div>
   <fieldset class="pay-form__fieldset">
     <div class="pay-form__info">
-      <p class="pay-form__info-text">Pay with card</p>
+      <p class="pay-form__info-text">Оплатить картой</p>
       <div class="pay-form__info-icons">
         <img src="img/icon-pay-01.png" alt="">
         <img src="img/icon-pay-02.png" alt="">
@@ -29,9 +29,9 @@
       </div>
       <div class="pay-form__field pay-form__field--half">
         <label for="pay-card-cvv" class="pay-form__label">CVV <mark>(3 digist)</mark></label>
-        <input type="text" id="pay-card-cvv" maxlength="3" class="pay-form__input">
+        <input type="text" id="pay-card-cvv" maxlength="3" class="pay-form__input" placeholder="●●●">
       </div>
     </div>
   </fieldset>
-  <button type="submit" class="pay-form__button">Оплатить</button>
+  <button type="submit" class="pay-form__button">Оплатить картой</button>
 </form>

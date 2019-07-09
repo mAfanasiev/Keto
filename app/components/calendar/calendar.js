@@ -53,7 +53,7 @@ $(function () {
   };
 
   var calendar = new Calendar();
-  console.log(calendar);
+  // console.log(calendar);
 
   $weeksControl.click(function (evt) {
     var $this = $(this);
