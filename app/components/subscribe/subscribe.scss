@@ -46,7 +46,7 @@
       display: block;
       margin: auto;
       width: 49px;
-      height: 42px;
+      height: 32px;
       background-image: url("../img/subscribe-email-icon.svg");
       background-position: center center;
       background-repeat: no-repeat;
@@ -82,8 +82,13 @@
 }
 
 .subscribe__label {
+  position: relative;
   display: flex;
   cursor: pointer;
+}
+
+.subscribe__checkbox {
+  left: 11px;
 }
 
 .subscribe__check {
@@ -125,7 +130,6 @@
 
 .subscribe__agreement-link,
 .male .subscribe__agreement-link {
-  padding-left: 50px;
   color: #76e5c8;
 }
 

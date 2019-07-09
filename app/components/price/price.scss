@@ -21,7 +21,7 @@
     top: calc(50% + 9px);
     left: 50%;
     height: 65px;
-    border-left: 1px solid #545e6a;
+    border-left: 1px solid #4b5d74;
     transform: translate(-50%, -50%)
   }
 }
@@ -59,9 +59,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: -7px;
-    width: 171px;
+    top: 17px;
+    left: -8px;
+    width: 161px;
     border-top: 1px solid #f54d64;
     transform-origin: center left;
     transform: rotate(15deg);

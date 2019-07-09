@@ -53,8 +53,8 @@
   &::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 25px;
     margin-right: 20px;
     background-image: url("../img/icon-pay-abstract.svg");
     background-position: center center;
@@ -132,6 +132,7 @@
   line-height: 60px;
   text-transform: uppercase;
   background-color: #276bbf;
+  cursor: pointer;
 
   .pay-form__button:disabled {
     background-color: #d8dada;
