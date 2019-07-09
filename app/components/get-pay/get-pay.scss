@@ -1,0 +1,134 @@
+.get-pay {
+  background-color: white;
+}
+
+.get-pay__images {
+  display: flex;
+  align-items: flex-start;
+  height: 150px;
+  padding-top: 46px;
+}
+
+.get-pay__images .visa {
+  margin-top: 3px;
+  margin-left: 73px;
+}
+
+.get-pay__images .master-card {
+  margin-top: 3px;
+  margin-left: 76px;
+}
+
+.get-pay__images .maestro {
+  margin-top: 3px;
+  margin-left: 76px;
+}
+
+.get-pay__images .jcb {
+  margin-left: 81px;
+}
+
+.get-pay__images .american-express {
+  margin-top: 2px;
+  margin-left: 76px;
+}
+
+.get-pay__images .discover {
+  margin-top: 6px;
+  margin-left: 80px;
+}
+
+@include r(1230) {
+  .get-pay__images {
+    justify-content: space-between;
+  }
+
+  .get-pay__images .visa,
+  .get-pay__images .master-card,
+  .get-pay__images .maestro,
+  .get-pay__images .jcb,
+  .get-pay__images .american-express,
+  .get-pay__images .discover {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@include r(1070) {
+  .get-pay__images {
+    align-items: center;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+
+@include r(767) {
+  .get-pay__images .visa {
+    max-width: 79px;
+  }
+  
+  .get-pay__images .master-card {
+    max-width: 40px;
+  }
+
+  .get-pay__images .maestro {
+    max-width: 41px;
+  }
+
+  .get-pay__images .jcb {
+    max-width: 35px;
+  }
+
+  .get-pay__images .american-express {
+    max-width: 71px;
+  }
+
+  .get-pay__images .discover {
+    max-width: 105px;
+  }
+}
+
+@include r(639) {
+  .get-pay__images {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 320px;
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+
+  .get-pay__images .visa {
+    margin-left: 8px;
+  }
+  
+  .get-pay__images .master-card {
+    margin-left: 49px;
+  }
+
+  .get-pay__images .maestro {
+    margin-left: 61px;
+  }
+
+  .get-pay__images .jcb {
+    margin-top: 24px;
+    margin-left: 34px;
+  }
+
+  .get-pay__images .american-express {
+    margin-top: 24px;
+    margin-left: 41px;
+  }
+
+  .get-pay__images .discover {
+    margin-top: 27px;
+    margin-left: 26px;
+  }
+}
+
+@include r(479) {
+  .get-pay__images {
+    margin: 0 -20px;
+  }
+}

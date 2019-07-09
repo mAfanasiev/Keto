@@ -170,7 +170,7 @@ $( document ).ready(function() {
     $('.test__tabs-input').keydown(function (e) {
         var charCode = e.which || e.keyCode;
 
-        if(charCode > 47 && charCode < 58 || charCode === 8 || charCode === 9) {
+        if(charCode > 47 && charCode < 58 || charCode > 95 && charCode < 106 || charCode === 8 || charCode === 9) {
         } else {
             return false;
         }
@@ -227,6 +227,7 @@ $( document ).ready(function() {
     }
     function retarget() {
         quiz.hash = 'test1';
+        quiz.animation = false;
         window.localStorage.setItem('quiz', JSON.stringify(quiz));
         window.location.href += 'result.html';
     }

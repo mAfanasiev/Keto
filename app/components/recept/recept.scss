@@ -1,19 +1,6 @@
 .recept {
   position: relative;
-  height: 2000px;
-  &::before {
-    content: '';
-    width: 1px;
-    height: 500px;
-    background-image: repeating-linear-gradient(to bottom,
-            #545e6a,
-            #545e6a 5px,
-            transparent 5px,
-            transparent 10px);
-    position: absolute;
-    top: 0;
-    right: -10px;
-  }
+
 
   &__top {
     width: 120px;
@@ -65,6 +52,8 @@
     background-color: transparentize(#2e3844, 0.4);
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 60px;
+    margin-bottom: 130px;
   }
   &__des {
     text-align: center;
@@ -118,7 +107,7 @@
     }
     &-play {
       position: absolute;
-      background-image: linear-gradient(to right,$grad-start,$grad-end);
+      background-image: linear-gradient(to left,$grad-start,$grad-end);
       background-position: center center;
       background-repeat: no-repeat;
       border-radius: 50%;
@@ -196,7 +185,7 @@
       cursor: pointer;
       margin-top: 27px;
       display: block;
-      background-image: linear-gradient(to right,$grad-start,$grad-end);
+      background-image: linear-gradient(to left,$grad-start,$grad-end);
       padding: 2px;
       width: 350px;
       border-radius: 32px;
@@ -226,5 +215,93 @@
 
   &__step {
     width: 470px;
+    &-title {
+      margin-top: -10px;
+      margin-bottom: 41px;
+    }
+    &-item {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 28px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0px;
+        width: 1px;
+        height: 100%;
+        background-image: repeating-linear-gradient(to bottom,
+                #545e6a,
+                #545e6a 5px,
+                transparent 5px,
+                transparent 10px);
+      }
+      &:last-child {
+        padding-bottom: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &--3 {
+        padding-bottom: 48px;
+      }
+      &--4 {
+        padding-bottom: 52px;
+      }
+      &--5 {
+        padding-bottom: 30px;
+      }
+    }
+    &-num {
+      flex-shrink: 0;
+      margin-right: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $grad-start,$grad-end);
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 14px;
+      position: relative;
+      z-index: 2;
+    }
+    &-img {
+      border-radius: 7px;
+      margin-bottom: 20px;
+    }
+    &-text {
+      opacity: 0.7;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+  &__btn {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 60px;
+    border-radius: 29px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 72px;
+    background-image: linear-gradient(to left, $grad-start,$grad-end);
+    cursor: pointer;
+  }
+}
+
+.female {
+  .recept__btn, .recept__step-num, .recept__top-circle, .recept__video-play, .recept__products-btn {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
   }
 }
