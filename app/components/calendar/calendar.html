@@ -1,22 +1,30 @@
-<article class="calendar">
+<article class="calendar popup">
   <div class="calendar__top">
     <div class="calendar__secondary-controls">
-      <button type="button" class="calendar__button">!</button>
-      <button type="button" class="calendar__button calendar__button--info">!</button>
+      <button type="button" class="calendar__button calendar__button--alert">!</button>
+      <button type="button" class="calendar__button calendar__button--info"></button>
     </div>
     <div class="calendar__weeks-controls">
-
+      <p class="calendar__weeks-counter">Неделя <span class="value">1</span></p>
+      <button type="button" class="calendar__weeks-control prev"></button>
+      <button type="button" class="calendar__weeks-control next"></button>
     </div>
     <div class="calendar__days-controls">
-      <button type="button" class="calendar__days-button" data-day="monday">Пн</button>
-      <button type="button" class="calendar__days-button" data-day="tuesday">Вт</button>
-      <button type="button" class="calendar__days-button" data-day="wednesday">Ср</button>
-      <button type="button" class="calendar__days-button" data-day="thursday">Чт</button>
-      <button type="button" class="calendar__days-button" data-day="friday">Пт</button>
-      <button type="button" class="calendar__days-button" data-day="saturday">Сб</button>
-      <button type="button" class="calendar__days-button" data-day="sunday">Вс</button>
+      <button type="button" class="calendar__day-button active" data-day="monday">Пн</button>
+      <button type="button" class="calendar__day-button">Вт</button>
+      <button type="button" class="calendar__day-button">Ср</button>
+      <button type="button" class="calendar__day-button">Чт</button>
+      <button type="button" class="calendar__day-button">Пт</button>
+      <button type="button" class="calendar__day-button">Сб</button>
+      <button type="button" class="calendar__day-button">Вс</button>
     </div>
   </div>
-  <div class="calendar__body"></div>
-  <div class="calendar__bottom"></div>
+  <div class="calendar__body">
+    <!--=include ../week/week.html -->
+  </div>
+  <div class="calendar__bottom">
+    <p class="calendar__print-title">Print recipes:</p>
+    <button type="button" class="calendar__print-button common-button">за день 1</button>
+    <p class="calendar__note">This plan was prepared for mult.tiutyk@gmail.com</p>
+  </div>
 </article>
