@@ -200,7 +200,7 @@ $( document ).ready(function() {
         // window.location.href += 'result.html';
     }
 
-    console.log(window.location.href);
+    // console.log(window.location.href);
 
     function startAnim () {
         function updateHandler() {

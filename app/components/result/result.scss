@@ -6,7 +6,7 @@
     url("../img/Fish-img.png"),
     url("../img/brokoli-img.png"),
     url("../img/lime-img.png"),
-    url("../img/result-bg.jpg");
+    url("../img/pattern.jpg");
   background-position:
     left calc(50% - 147px) top -74px, // lime #top
     left calc(50% - 913px) top 87px, // broccoli #top
@@ -15,9 +15,8 @@
     left calc(50% + 1019px) bottom 566px, // broccoli #bottom
     left calc(50% - 925px) bottom 24px, // lime #bottom
     center top; // main background
-  background-repeat: no-repeat;
-  background-size: auto, auto, auto, auto, auto, auto, cover;
-  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: auto;
 }
 
 .result__content {
@@ -194,12 +193,12 @@
     background-image:
       url("../img/fish__mob.png"),
       url("../img/broccoli-mob.png"),
-      url("../img/result-bg.jpg");
+      url("../img/pattern.jpg");
     background-position:
       left -125px top 426px, // fish
       right -28px top 97px, // broccoli
       center top; // main background
-    background-size: 284px 306px, 97px 101px, auto 100%;
+    background-repeat: no-repeat, no-repeat, repeat;
   }
 
   .result .header {
