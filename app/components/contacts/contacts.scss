@@ -1,4 +1,4 @@
-.pay {
+.contacts {
   background-image:
     url("../img/Fish-img.png"),
     url("../img/paper-img.png"),
@@ -7,93 +7,84 @@
   background-position:
     left calc(50% - 1040px) top -16px, // fish
     left calc(50% + 1005px) top -281px, // corn/peper
-    left calc(50% + 940px) bottom 6px, // broccoli
+    left calc(50% + 940px) bottom -93px, // broccoli
     center top; // main background
   background-repeat: no-repeat;
   background-size: auto, auto, auto, cover;
   background-attachment: scroll, scroll, scroll;
 }
 
-.pay__content {
+.contacts__content {
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.pay__popup {
-  min-height: 845px;
-  margin: 183px auto 107px;
-  padding: 81px 15px 0;
+.contacts__popup {
+  margin: 183px auto 383px;
+  padding: 81px 0 70px;
 }
 
-.pay__target {
-& .center::after {
+.contacts__target {
+  & .center::after {
     content: "";
     display: block;
     margin: auto;
-    width: 36px;
-    height: 52px;
-    background-image: url("../img/icon-pay.svg");
+    width: 46px;
+    height: 43px;
+    background-image: url("../img/contacts-email-icon.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 }
 
-.pay__body {
-  max-width: 570px;
+.contacts__body {
+  max-width: 630px;
   margin: 0 auto;
 }
 
-.pay__text {
+.contacts__text {
   margin-bottom: 44px;
   text-align: center;
 }
 
-.pay__title {
+.contacts__title {
   margin-bottom: 14px;
 }
 
-.pay__form {
-  margin-bottom: 38px;
+.contacts__subtitle {
+  max-width: 530px;
+  margin: 0 auto;
 }
 
-.pay__note {
-  position: relative;
-  padding-left: 115px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-
-  & img {
-    position: absolute;
-    top: -8px;
-    left: 27px;
-    width: 80px;
-    height: 25px;
-  }
+.contacts__field {
+  margin-bottom: 50px;
 }
 
-.pay__note mark,
-.male .pay__note mark {
-  color: #2ccda4;
-}
-
-.female .pay__note mark {
-  color: #f55064;
+.contacts__buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 @include r(1230) {
-  .pay {
+  .contacts {
     background-position:
       left calc(50% - 820px) top -75px, // fish
       left calc(50% + 885px) top -280px, // corn/peper
-      left calc(50% + 660px) bottom 6px, // broccoli
+      left calc(50% + 660px) bottom -75px, // broccoli
       center top; // main background
+  }
+
+  .contacts__popup {
+    margin-top: 90px;
+    margin-bottom: 150px;
   }
 }
 
 @include r(1070) {
-  .pay {
+  .contacts {
     background-image:
       url("../img/fish__mob.png"),
       url("../img/broccoli-mob.png"),
@@ -104,79 +95,68 @@
       center top; // main background
     background-size: 284px 306px, 97px 101px, cover;
   }
-
-  .pay .header {
+  
+  .contacts .header {
     padding-top: 23px;
   }
 
-  .pay .header__logo {
+  .contacts .header__logo {
     width: 107px;
     height: 18px;
   }
 
-  .pay__popup {
-    min-height: auto;
-    margin-top: 90px;
-    margin-bottom: 53px;
-    padding-top: 47px;
-    padding-bottom: 17px;
+  .contacts__popup {
+    margin-top: 62px;
+    margin-bottom: 35px;
+    padding-top: 46px;
+    padding-bottom: 25px;
   }
 
-  .pay__target .center::after {
-    width: 18px;
-    height: 26px;
+  .contacts__target .center::after {
+    width: 23px;
+    height: 21px;
   }
 
-  .pay__text {
-    margin-bottom: 10px;
+  .contacts__body {
+    max-width: 400px;
+    padding: 0 15px;
   }
 
-  .pay__title {
-    margin-bottom: 3px;
+  .contacts__text {
+    margin-bottom: 23px;
   }
 
-  .pay__subtitle {
-    max-width: 210px;
-    margin: 0 auto;
+  .contacts__title {
+    margin-bottom: 5px;
+  }
+
+  .contacts__subtitle {
     font-size: 18px !important;
-    line-height: 22px !important;
+    line-height: (22 / 18) !important;
   }
 
-  .pay__form {
-    margin-bottom: 25px;
+  .contacts__subtitle br {
+    display: none;
   }
 
-  .pay__note {
-    max-width: 290px;
-    margin: 0 auto;
-    padding-left: 88px;
-    font-size: 15px;
-    line-height: 18px;
+  .contacts__field {
+    margin-bottom: 0;
   }
 
-  .pay__note img {
-    top: -4px;
-    left: 1px;
+  .contacts__buttons {
+    flex-direction: column;
   }
 
-  .pay__note mark {
-    display: block;
+  .contacts__button {
+    margin: 20px auto 0;
   }
 }
 
 @include r(767) {
-  .pay {
+  .contacts {
     background-position:
     left -125px top 229px, // fish
     right -28px top 147px, // broccoli
     center top; // main background
-  }
-
-  .pay__popup {
-    margin-top: 62px;
-  }
-
-  .pay__form {
-    margin-bottom: 24px;
   }
 }

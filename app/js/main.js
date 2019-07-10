@@ -7,4 +7,5 @@
 //=include ../components/faq/faq.js
 //=include ../components/diet/diet.js
 //=include ../components/calendar/calendar.js
+//=include ../components/contacts/contacts.js
 //=include ../components/footer/footer.js

@@ -27,8 +27,8 @@ $(function () {
 
     var onDocumentClick = function (evt) {
       var $this = $(evt.target);
-      if (!$this.closest($cards).length) {
-        $cards.removeClass(CARD_TOGGLE);
+      if (!$this.closest($parent).length) {
+        $parent.removeClass(CARD_TOGGLE);
         $(document).unbind('click', onDocumentClick);
       }
     };

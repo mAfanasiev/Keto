@@ -24,34 +24,16 @@
 }
 
 .subscribe__target {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  transform: translateX(-50%);
-
-  & .half {
-    width: 99px;
-    height: 99px;
-  }
-
-  & .center {
-    position: relative;
-    width: 83px;
-    height: 83px;
-
-    &::after {
-      content: "";
-      display: block;
-      margin: auto;
-      width: 49px;
-      height: 32px;
-      background-image: url("../img/subscribe-email-icon.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
+  & .center::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 49px;
+    height: 32px;
+    background-image: url("../img/subscribe-email-icon.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }
 
@@ -196,24 +178,8 @@
     padding-bottom: 40px;
   }
 
-  .subscribe__target {
-    width: 72px;
-    height: 72px;
-    top: -35px;
-  }
-
-  .subscribe__target .half {
-    width: 59px;
-    height: 59px;
-  }
-
-  .subscribe__target .center {
-    width: 49px;
-    height: 49px;
-  }
-
   .subscribe__target .center::after {
-    width: 25px;
+    width: 23px;
     height: 16px;
   }
 
