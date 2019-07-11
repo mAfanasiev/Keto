@@ -14,8 +14,8 @@ $('.header__menu-link').click(function () {
     $(this).addClass('active').siblings().removeClass('active');
 });
 
-let reg = /\/?(\w+)/;
-let result;
+var reg = /\/?(\w+)/;
+var result;
 
 if (reg.exec(window.location.pathname)) {
     result = reg.exec(window.location.pathname);
