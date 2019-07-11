@@ -159,13 +159,69 @@
     display: block;
     margin-top: 0;
     margin-bottom: 15px;
+    padding-left: 90px;
     padding-right: 20px;
     padding-bottom: 11px;
   }
 
   .week__meal-time {
     max-width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .week__meal-time span {
+    font-size: 17px;
+  }
+
+  .week__thumb {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  .week__meal-item {
+    min-height: auto;
+    margin-bottom: 3px;
+    padding: 0;
+    font-size: 15px;
+    border: none;
+  }
+
+  .week__meal-weight {
+    position: static;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .week__meal-weight .arrow {
+    top: 10px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .week__meal-weight .arrow::after {
+    left: 9px;
+    width: 6px;
+    height: 10px;
+  }
+}
+
+@include r(479) {
+  .week__row {
+    padding-left: 10px;
+  }
+
+  .week__meal-time {
+    max-width: 100%;
     margin-bottom: 9px;
+  }
+
+  .week__thumb {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
   }
 
   .week__meal-item {

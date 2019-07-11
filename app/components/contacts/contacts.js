@@ -25,13 +25,14 @@ $(function () {
     var value = $this.val();
     evt.preventDefault();
 
-    checkValidityState();
     if (!regex.test(value)) {
       $this.removeClass('valid').addClass('invalid');
+      checkValidityState();
       return;
     }
 
     $this.removeClass('invalid').addClass('valid');
+    checkValidityState();
   });
 
   checkValidityState();

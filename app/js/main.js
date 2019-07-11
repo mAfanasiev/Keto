@@ -1,6 +1,7 @@
 //=include ../components/header/header.js
 //=include ../components/tests/test.js
 //=include ../components/result/result.js
+//=include ../components/result-resume/result-resume.js
 //=include ../components/subscribe/subscribe.js
 //=include ../components/get/get.js
 //=include ../components/pay/pay.js
