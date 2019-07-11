@@ -12,11 +12,13 @@
     left calc(50% - 913px) top 87px, // broccoli #top
     left calc(50% + 1093px) top -281px, // corn/peper
     left calc(50% - 1146px) top calc(50% - 18px), // fish
-    left calc(50% + 1019px) bottom 566px, // broccoli #bottom
+    // left calc(50% + 1019px) bottom 566px, // broccoli #bottom
+    left calc(50% + 850px) bottom 566px, // broccoli #bottom
     left calc(50% - 925px) bottom 24px, // lime #bottom
     center top; // main background
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
   background-size: auto;
+  background-attachment: scroll !important;
 }
 
 .result__content {

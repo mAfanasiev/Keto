@@ -65,6 +65,7 @@
   background-color: $transparent;
   border: 1px solid #545e6a;
   border-radius: 5px;
+  transition: all 0.3s;
 
   &::placeholder {
     color: transparentize(white, 0.5);
@@ -75,6 +76,19 @@
   &:focus::placeholder {
     color: $transparent;
   }
+}
+
+.popup__input.invalid {
+  border-color: crimson;
+}
+
+.popup__input.valid,
+.male .popup__input.valid {
+  border-color: $boy-target-start;
+}
+
+.female .popup__input.valid {
+  border-color: $girl-target-start;
 }
 
 .popup__input--email {
@@ -115,7 +129,7 @@
   opacity: 0.5;
 }
 
-.popup__input:valid ~ .icon-valid {
+.popup__input.valid ~ .icon-valid {
   opacity: 1;
 }
 

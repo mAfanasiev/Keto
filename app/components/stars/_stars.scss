@@ -12,14 +12,17 @@
   margin-left: 13px;
 }
 
+.stars svg .border,
 .male .stars svg .border {
   fill: $boy-target-start;
 }
 
+.stars svg .star,
 .male .stars svg .star {
   fill: url("#man");
 }
 
+.stars svg.half .star,
 .male .stars svg.half .star {
   fill: url("#man-half");
 }

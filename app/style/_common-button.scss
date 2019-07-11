@@ -5,6 +5,7 @@
   flex-shrink: 0;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+  transition: all 0.3s;
 
   background-image: linear-gradient(
     to right,
@@ -15,6 +16,10 @@
   border-radius: 40px;
   cursor: pointer;
   overflow: hidden;
+
+  &:visited {
+    color: white !important;
+  }
 
   &:active {
     transform: translateY(3px);

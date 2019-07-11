@@ -1,3 +1,18 @@
+::-ms-clear {
+	display: none;
+}
+
+select:-moz-focusring, a:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+*:focus, *:visited, *:active, *:hover  { outline:0!important;}
+a, a:focus, a:visited, a:active, a:hover  { outline:0!important;}
+*::-moz-focus-inner {
+	border: 0;
+	outline: none;
+}
+
 html,
 body {
 	overflow-x: hidden;
