@@ -87,14 +87,6 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0;
 }
 
-body.pay {
-	@include decorate-background('partial');
-	background-position:
-		left -647px top calc(50% - 58px),
-		right -474px top -281px,
-		right -119px bottom 8px,center top
-}
-
 body, html {
 	overflow-x: hidden;
 }

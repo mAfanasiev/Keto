@@ -3,6 +3,7 @@
   background-position: center center;
   background-size: auto;
   background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 .get__content {
@@ -27,7 +28,7 @@
 }
 
 .get__background-images .broccoli {
-  bottom: -7px;
+  top: 796px;
   left: calc(50% + 808px);
 }
 
@@ -178,7 +179,7 @@
   }
   
   .get__background-images .broccoli {
-    bottom: -7px;
+    top: 796px;
     left: calc(50% + 518px);
   }
 

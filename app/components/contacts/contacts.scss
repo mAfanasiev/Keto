@@ -7,10 +7,11 @@
   background-position:
     left calc(50% - 1040px) top -16px, // fish
     left calc(50% + 1005px) top -281px, // corn/peper
-    left calc(50% + 940px) bottom -93px, // broccoli
+    left calc(50% + 940px) top 989px, // broccoli
     center top; // main background
   background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   background-size: auto;
+  background-attachment: scroll;
 }
 
 .contacts__content {
@@ -70,9 +71,9 @@
 @include r(1230) {
   .contacts {
     background-position:
-      left calc(50% - 820px) top -75px, // fish
+      left calc(50% - 880px) top -75px, // fish
       left calc(50% + 885px) top -280px, // corn/peper
-      left calc(50% + 660px) bottom -75px, // broccoli
+      left calc(50% + 660px) top 490px, // broccoli
       center top; // main background
   }
 
