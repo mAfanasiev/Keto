@@ -1,0 +1,143 @@
+.general {
+
+  &__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__items {
+    margin-top: 43px;
+    padding-left: 116px;
+    padding-right: 67px;
+  }
+  &__item {
+    margin-bottom: 42px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-left: -70px;
+      margin-bottom: 6px;
+    }
+    &-title {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &-num {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background-color: #2e3844;
+      background-image: linear-gradient(to right,$grad-start,$grad-end);
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 28px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    &-text {
+      color: transparentize(#ffffff, .3);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 22px;
+      &--pl {
+        padding-left: 17px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__back {
+    margin-top: 44px;
+  }
+}
+
+.female {
+  .general__item-num {
+    background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
+  }
+}
+
+@include r(1070) {
+  .general {
+    &__items {
+      padding-left: 100px;
+      padding-right: 40px;
+    }
+
+    &__back {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include r(767) {
+  .general {
+    &__items {
+      margin-top: 20px;
+      padding-left: 80px;
+      padding-right: 30px;
+    }
+
+    &__item {
+      &-top {
+        margin-left: -60px;
+      }
+      &-num {
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
+
+
+@include r(639) {
+  .general {
+    &__items {
+      margin-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__item {
+      &-top {
+        margin-left: 00px;
+      }
+      &-num {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        margin-right: 15px;
+      }
+    }
+
+  }
+}
+
+@include r(479) {
+  .general {
+    &__items {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__back {
+      margin-top: 20px;
+    }
+  }
+}

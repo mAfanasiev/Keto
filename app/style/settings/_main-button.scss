@@ -8,8 +8,8 @@
   font-size: 28px;
   background-image: linear-gradient(
     to right,
-    $boy-target-start,
-    $boy-target-end
+    $grad-start,
+    $grad-end
   );
   text-decoration: none;
   border-radius: 40px;
@@ -27,9 +27,5 @@
 }
 
 .female .main-button {
-  background-image: linear-gradient(
-                  to left,
-                  $girl-target-start,
-                  $girl-target-end
-  );
+  background-image: linear-gradient(to left, #fb8768 0%, #f54d64 100%);
 }

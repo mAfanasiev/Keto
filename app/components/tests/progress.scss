@@ -32,7 +32,7 @@
     height: 4px;
     left: 60px;
     z-index: 2;
-    background-image: linear-gradient(to left, rgb(118, 229, 200) 0%, rgb(39, 205, 162) 100%);
+    background-image: linear-gradient(to left, $grad-start 0%, $grad-end 100%);
   }
   &__wrap {
     display: flex;
@@ -60,6 +60,8 @@
     align-items: flex-start;
   }
   &__circle {
+    pointer-events: none;
+    cursor: pointer;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -70,8 +72,13 @@
     border-radius: 50%;
     position: relative;
     z-index: 3;
+    &:hover {
+      & + .progressBar__text {
+        text-decoration: underline;
+      }
+    }
   }
-  &__text {
+  &__text  {
     opacity: 0.4;
     color: #ffffff;
     font-size: 15px;
@@ -93,11 +100,11 @@
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -110,16 +117,21 @@
       width: calc(130px);
     }
     &__item {
+      &:nth-child(-n + 1) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 2) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -131,16 +143,21 @@
       width: calc(270px);
     }
     &__item {
+      &:nth-child(-n + 2) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 3) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -152,16 +169,21 @@
       width: calc(390px);
     }
     &__item {
+      &:nth-child(-n + 3) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 4) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -173,16 +195,21 @@
       width: calc(520px);
     }
     &__item {
+      &:nth-child(-n + 4) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 5) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -194,16 +221,21 @@
       width: calc(640px);
     }
     &__item {
+      &:nth-child(-n + 5) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 6) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -215,16 +247,21 @@
       width: calc(780px);
     }
     &__item {
+      &:nth-child(-n + 6) {
+        .progressBar__circle {
+          pointer-events: visible;
+        }
+      }
       &:nth-child(-n + 7) {
         .progressBar__text {
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
         }
       }
     }
@@ -241,11 +278,16 @@
           opacity: 1;
         }
         .progressBar__circle {
-          background-color: #27cda2;
+          background-color: $grad-end;
         }
         .progressBar__ico {
           opacity: 1;
-          fill: #27cda2;
+          fill: $grad-end;
+        }
+        &:nth-child(-n + 7) {
+          .progressBar__circle {
+            pointer-events: visible;
+          }
         }
       }
     }

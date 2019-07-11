@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    // если нужно что бы все елементы были выбраны нужно в обьекте tests все масивы заполнить цыфрами от 0 до количества елементов в тесте минус 1
     var quiz = {
         hash:'test1',
         animation: false,
@@ -86,7 +86,14 @@ $( document ).ready(function() {
     });
 
     $('.test__nav-help').click(function (e) {
-        $('.help').fadeIn();
+        $(this).data('popup');
+        console.log($(this).data('popup'))
+
+        if($(this).data('popup')) {
+            $('#'+$(this).data('popup')).fadeIn();
+        } else {
+            $('#help1').fadeIn();
+        }
         $('.help__overlay').addClass('active');
     });
 
@@ -96,6 +103,10 @@ $( document ).ready(function() {
     });
 
     $('.test__nav-back').click(function () {
+        prevScreen(this, $(this).data('prev'));
+    });
+
+    $('.progressBar__circle').click(function () {
         prevScreen(this, $(this).data('prev'));
     });
 
@@ -131,6 +142,14 @@ $( document ).ready(function() {
         validate('test7', 'test__content-item', 'test8', this);
     });
 
+    $('.test__content-item--js').click(function () {
+        $('.test__content-item--last').removeClass('active');
+    });
+
+    $('.test__content-item--last').click(function () {
+       $(this).siblings().removeClass('active');
+    });
+
     $('.test__tabs-item').click(function () {
        $(this).addClass('active').siblings().removeClass('active');
        $('.test__tabs-system').removeClass('active');
@@ -138,11 +157,24 @@ $( document ).ready(function() {
     });
 
     $('.test__tabs-input').on('input', function () {
+        if ($(this).val().length > $(this).attr('maxLength')) {
+            $(this).val($(this).val().slice(0, $(this).attr('maxLength')));
+        }
         if($(this).val() && $.trim($(this).val() + '')) {
             $(this).parent().removeClass('error').addClass('active');
         } else {
             $(this).parent().removeClass('active');
         }
+    });
+
+    $('.test__tabs-input').keydown(function (e) {
+        var charCode = e.which || e.keyCode;
+
+        if(charCode > 47 && charCode < 58 || charCode > 95 && charCode < 106 || charCode === 8 || charCode === 9) {
+        } else {
+            return false;
+        }
+
     });
 
     $('.test__tabs-input').blur(function () {
@@ -154,7 +186,7 @@ $( document ).ready(function() {
         var parrent = $(this).parent().children('.test__tabs-field');
 
         for (var i = 0; i < parrent.length; i++) {
-            if(!$(parrent.children('.test__tabs-input')[i]).val()) {
+            if(!$(parrent.children('.test__tabs-input')[i]).val() || $(parrent.children('.test__tabs-input')[i]).val().length < $(parrent.children('.test__tabs-input')[i]).attr('minLength') ) {
                 $(parrent[i]).addClass('error');
                 counter += 1;
             } else {
@@ -195,12 +227,10 @@ $( document ).ready(function() {
     }
     function retarget() {
         quiz.hash = 'test1';
-        quiz.animation = true;
+        quiz.animation = false;
         window.localStorage.setItem('quiz', JSON.stringify(quiz));
-        // window.location.href += 'result.html';
+        window.location.href += 'result.html';
     }
-
-    // console.log(window.location.href);
 
     function startAnim () {
         function updateHandler() {
