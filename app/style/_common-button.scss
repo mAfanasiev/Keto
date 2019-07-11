@@ -5,7 +5,7 @@
   flex-shrink: 0;
   color: white;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 
   background-image: linear-gradient(
     to right,
@@ -25,15 +25,19 @@
     transform: translateY(3px);
   }
 
+  &:hover {
+    background-image: linear-gradient(to left, #23cba0, #009574);
+	}
+
   &:disabled {
-    color: transparentize(white, 0.3);
-    background-color: #d3d3d3;
-    background-image: none;
-    cursor: auto;
+    color: transparentize(white, 0.3) !important;
+    background-color: #d3d3d3 !important;
+    background-image: none !important;
+    cursor: auto !important;
   }
 
   &:disabled::after {
-    opacity: 0.7;
+    opacity: 0.7 !important;
   }
 
   &::after {
@@ -82,8 +86,18 @@
   &--back {
     padding-left: 100px;
     padding-right: 54px;
-    background: none;
     line-height: 56px;
+    background: none;
+  }
+
+  &--back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
     border: 2px solid $boy-target-start;
   }
 
@@ -93,6 +107,10 @@
     right: auto;
     transform: scaleX(-1);
   }
+
+  &--back:hover::before {
+    border-color: $transparent;
+  }
 }
 
 .female .common-button {
@@ -101,10 +119,22 @@
     $girl-target-start,
     $girl-target-end
   );
+
+  &:hover {
+    background-image: linear-gradient(to left, #f57351, #e42d46);
+  }
 }
 
 .female .common-button--back {
-  border-color: $girl-target-start;
+  background: none;
+
+  &::before {
+    border-color: $girl-target-start;
+  }
+
+  &:hover::before {
+    border-color: $transparent;
+  }
 }
 
 @include r(1070) {

@@ -82,15 +82,6 @@
   border-color: crimson;
 }
 
-.popup__input.valid,
-.male .popup__input.valid {
-  border-color: $boy-target-start;
-}
-
-.female .popup__input.valid {
-  border-color: $girl-target-start;
-}
-
 .popup__input--email {
   padding: 0 80px;
 }
