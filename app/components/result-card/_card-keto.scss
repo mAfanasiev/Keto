@@ -30,12 +30,36 @@
   }
 }
 
-#carbs {}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
 
-#proteins {
-  display: none;
+  5% {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-#fats {
-  display: none;
+.animatable-element {
+  animation: 9s blink linear infinite;
+}
+
+.proteins {
+  animation-delay: 3s;
+}
+
+.fats {
+  animation-delay: 6s;
 }
