@@ -6,20 +6,125 @@
     url("../img/Fish-img.png"),
     url("../img/brokoli-img.png"),
     url("../img/lime-img.png"),
-    url("../img/result-bg.jpg");
+    url("../img/pattern.jpg");
   background-position:
     left calc(50% - 147px) top -74px, // lime #top
     left calc(50% - 913px) top 87px, // broccoli #top
     left calc(50% + 1093px) top -281px, // corn/peper
-    left calc(50% - 1146px) top calc(50% - 18px), // fish
-    left calc(50% + 1019px) bottom 566px, // broccoli #bottom
-    left calc(50% - 925px) bottom 24px, // lime #bottom
+    left calc(50% - 1146px) top 798px, // fish
+    left calc(50% + 1019px) bottom 1321px, // broccoli #bottom
+    left calc(50% - 925px) bottom 780px, // lime #bottom
     center top; // main background
-  background-repeat: no-repeat;
-  background-size: auto, auto, auto, auto, auto, auto, cover;
-  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: auto;
+  background-attachment: scroll !important;
 }
 
 .diet__content {
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.diet__top {
+  margin-top: 183px;
+  margin-bottom: 91px;
+}
+
+.diet__title {
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  font-size: 40px;
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: (45 / 40);
+  text-align: center;
+
+  &--resume {
+    margin-bottom: 49px;
+  }
+
+  &--about {
+    margin-bottom: 53px;
+  }
+}
+
+.diet__resume {
+  margin-bottom: 145px;
+}
+
+.diet__recommendations {
+  margin-bottom: 94px;
+}
+
+@include r(1230) {
+  .diet {
+    background-position:
+      left calc(50% - 147px) top -74px, // lime #top
+      left calc(50% - 623px) top 87px, // broccoli #top
+      left calc(50% + 913px) top -281px, // corn/peper
+      left calc(50% - 836px) top 798px, // fish
+      left calc(50% + 659px) bottom 1321px, // broccoli #bottom
+      left calc(50% - 615px) bottom 780px, // lime #bottom
+      center top; // main background
+  }
+}
+
+@include r(1070) {
+  .diet {
+    background-image:
+      url("../img/fish__mob.png"),
+      url("../img/broccoli-mob.png"),
+      url("../img/result-bg.jpg");
+    background-position:
+      left -125px top 228px, // fish
+      right -28px top 147px, // broccoli
+      center top; // main background
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: auto;
+  }
+
+  .diet .header {
+    padding-top: 23px;
+  }
+
+  .diet .header__logo {
+    width: 107px;
+    height: 18px;
+  }
+
+  .diet__top {
+    margin-top: 52px;
+    margin-bottom: 38px;
+  }
+
+  .diet__title {
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .diet__title--resume {
+    margin-bottom: 24px;
+  }
+
+  .diet__resume {
+    margin-bottom: 76px;
+  }
+
+  .diet__recommendations {
+    margin-bottom: 51px;
+  }
+}
+
+@include r(639) {
+  .diet__resume {
+    max-width: 280px;
+    margin: 0 auto 76px;
+  }
+}
+
+@include r(479) {
+  .diet__title--resume {
+    text-align: left;
+  }
 }

@@ -3,8 +3,11 @@
 //=include ../components/result/result.js
 //=include ../components/subscribe/subscribe.js
 //=include ../components/get/get.js
+//=include ../components/pay/pay.js
 //=include ../components/pay-form/pay-form.js
 //=include ../components/faq/faq.js
 //=include ../components/diet/diet.js
 //=include ../components/calendar/calendar.js
+//=include ../components/diet-recommendations/diet-recommendations.js
+//=include ../components/contacts/contacts.js
 //=include ../components/footer/footer.js

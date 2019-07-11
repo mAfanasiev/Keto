@@ -1,0 +1,32 @@
+<section class="contacts__content">
+  <div class="contacts__wrapper wrapper">
+    <div class="contacts__popup popup">
+      <div class="contacts__target popup__target decorate-target">
+        <div class="half">
+          <div class="center"></div>
+        </div>
+      </div>
+      <div class="contacts__body">
+        <div class="contacts__text">
+          <h2 class="contacts__title popup__title">Связаться с нами</h2>
+          <p class="contacts__subtitle popup__subtitle">Пожалуйста, введите адрес электронной почты, который&nbsp;вы использовали для покупки плана питания</p>
+        </div>
+        <form class="contacts__form" onsubmit="return false;">
+          <div class="contacts__field popup__field popup__field--email">
+            <input type="email" class="contacts__input popup__input popup__input--email" placeholder="Электронный адрес" required>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" class="icon icon--email icon-invalid">
+              <path d="M0 0v20h30V0H0zm15 12L2 1h26zm-5-2l-9 8V2zm1 1l4 3 4-3 9 8H2zm9-1l9-8v16z" fill-rule="evenodd"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" class="icon icon--email icon-valid">
+              <path d="M0 0v20h30V0H0zm15 12L2 1h26zm-5-2l-9 8V2zm1 1l4 3 4-3 9 8H2zm9-1l9-8v16z" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="contacts__buttons">
+            <button type="submit" class="contacts__button common-button common-button--sm">Продолжить</button>
+            <a href="#" type="submit" class="contacts__button common-button common-button--sm common-button--back button-back">Назад</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

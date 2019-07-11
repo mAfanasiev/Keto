@@ -1,17 +1,5 @@
 'use strict';
 
-$(document).ready(function () {
-  if (window.localStorage.getItem('quiz') !== null) {
-    quiz = JSON.parse(window.localStorage.getItem('quiz'));
-  } else {}
-
-  if (quiz.gender === 'female') {
-    document.querySelector('body').classList.add('female');
-  } else {
-    document.querySelector('body').classList.add('male');
-  }
-});
-
 $(function () {
   var CARD_TOGGLE = 'result-card--about';
   var $resultScroll = $('.result__scroll');
@@ -27,8 +15,8 @@ $(function () {
 
     var onDocumentClick = function (evt) {
       var $this = $(evt.target);
-      if (!$this.closest($cards).length) {
-        $cards.removeClass(CARD_TOGGLE);
+      if (!$this.closest($parent).length) {
+        $parent.removeClass(CARD_TOGGLE);
         $(document).unbind('click', onDocumentClick);
       }
     };

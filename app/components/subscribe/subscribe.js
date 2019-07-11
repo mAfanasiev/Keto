@@ -1,14 +1,6 @@
-$(document).ready(function () {
-  if (window.localStorage.getItem('quiz') !== null) {
-    quiz = JSON.parse(window.localStorage.getItem('quiz'));
-  } else {}
+'use strict';
 
-  if (quiz.gender === 'female') {
-    document.querySelector('body').classList.add('female');
-  } else {
-    document.querySelector('body').classList.add('male');
-  }
-
+$(function () {
   $('.subscribe__form').submit(function(submitEvent) {
     submitEvent.preventDefault();
     window.location.href = "get.html";

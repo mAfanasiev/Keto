@@ -6,18 +6,6 @@
     padding-top: 28px;
   }
 
-  & #carbs {
-    // display: none;
-  }
-
-  & #proteins {
-    display: none;
-  }
-
-  & #fats {
-    display: none;
-  }
-
   & .value {
     font-size: 60px;
     line-height: 1;
@@ -40,4 +28,16 @@
     max-width: 145px;
     padding-top: 0;
   }
+}
+
+
+#carbs {
+}
+
+#proteins {
+  display: none;
+}
+
+#fats {
+  display: none;
 }

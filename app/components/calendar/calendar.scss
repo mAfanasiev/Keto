@@ -1,6 +1,6 @@
 .calendar {
   max-width: 1170px;
-  margin: 183px auto 0;
+  margin: 0 auto;
   padding-top: 82px;
   padding-left: 101px;
   padding-right: 99px;
@@ -78,6 +78,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   opacity: 0.6;
+  transition: all 0.3s;
 
   &.prev {
     left: 0;
@@ -87,6 +88,10 @@
   &.next {
     right: 0;
   }
+}
+
+.calendar__weeks-control:hover {
+  opacity: 1;
 }
 
 .calendar__days-controls {
@@ -101,6 +106,7 @@
 .calendar__day-button {
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   color: white;
@@ -127,6 +133,7 @@
   transition: all 0.3s;
 }
 
+.calendar__day-button:not(.active):hover,
 .male .calendar__day-button:not(.active):hover {
   color:  $boy-target-start;
 }
@@ -135,6 +142,7 @@
   color:  $girl-target-start;
 }
 
+.calendar__day-button::before,
 .male .calendar__day-button::before {
   background-image:
     linear-gradient(to right, $boy-target-start, $boy-target-end);
@@ -184,4 +192,78 @@
   line-height: (20 / 17);
   text-align: center;
   opacity: 0.5;
+}
+
+@include r(1070) {
+  .calendar {
+    position: relative;
+    padding: 28px 15px 27px;
+  }
+}
+
+@include r(767) {
+  .calendar__top {
+    position: static;
+    margin-bottom: 21px;
+  }
+
+  .calendar__body {
+    margin-bottom: 25px;
+  }
+
+  .calendar__button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .calendar__button--alert {
+    top: -15px;
+    left: 14px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .calendar__button--info {
+    top: -13px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    background-position: left 8px top 5px;
+    background-size: 13px 17px;
+  }
+
+  .calendar__weeks-counter {
+    font-size: 24px;
+  }
+
+  .calendar__weeks-controls {
+    max-width: 170px;
+    margin-bottom: 9px;
+  }
+
+  .calendar__weeks-control {
+    top: 4px;
+    width: 10px;
+    height: 17px;
+    background-image: url("../img/icon-control-arrow-bold-right.svg");
+  }
+
+  .calendar__days-controls {
+    max-width: 320px;
+  }
+
+  .calendar__day-button {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  .calendar__print-title {
+    margin-bottom: 16px;
+  }
+
+  .calendar__print-button {
+    margin-bottom: 22px;
+  }
 }

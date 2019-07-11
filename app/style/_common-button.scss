@@ -1,4 +1,5 @@
-.common-button {
+.common-button,
+.male .common-button {
   position: relative;
   display: block;
   flex-shrink: 0;
@@ -13,6 +14,7 @@
   text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
+  overflow: hidden;
 
   &:active {
     transform: translateY(3px);
@@ -59,6 +61,7 @@
     padding-left: 54px;
     padding-right: 80px;
     font-size: 20px;
+    line-height: 60px;
     text-align: left;
   }
 
@@ -70,6 +73,21 @@
     height: 20px;
     background-image: url("../img/main-button-arrow-02.svg");
   }
+
+  &--back {
+    padding-left: 100px;
+    padding-right: 54px;
+    background: none;
+    line-height: 56px;
+    border: 2px solid $boy-target-start;
+  }
+
+  &--back::after {
+    top: calc(50% - 11px);
+    left: 41px;
+    right: auto;
+    transform: scaleX(-1);
+  }
 }
 
 .female .common-button {
@@ -78,6 +96,10 @@
     $girl-target-start,
     $girl-target-end
   );
+}
+
+.female .common-button--back {
+  border-color: $girl-target-start;
 }
 
 @include r(1070) {

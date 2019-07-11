@@ -232,7 +232,6 @@ $( document ).ready(function() {
         window.location.href += 'result.html';
     }
 
-
     function startAnim () {
         function updateHandler() {
             if (scoreDisplay !== null) { scoreDisplay.innerHTML = plan.score; }

@@ -1,7 +1,8 @@
 .get {
-  background-image: url("../img/main-bg.jpg");
-	background-position: center center;
-	background-size: cover;
+  background-image: url("../img/pattern.jpg");
+  background-position: center center;
+  background-size: auto;
+  background-repeat: repeat;
 }
 
 .get__content {
@@ -200,6 +201,7 @@
       left calc(50% - 278px) top 229px, // fish
       left calc(50% + 274px) top 147px, // broccoli
       center center; // main background
+    background-repeat: no-repeat, no-repeat, repeat;
     background-size: 284px 306px, 97px 101px, cover;
   }
 

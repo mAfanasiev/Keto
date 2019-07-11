@@ -1,0 +1,230 @@
+.diet-recommendations__content {
+  font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.diet-recommendations__popup {
+  max-width: 100%;
+  padding: 90px 73px 53px;
+}
+
+.diet-recommendations__target {
+  & .center::after {
+    content: "?";
+    display: block;
+    margin: auto;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+  }
+}
+
+.diet-recommendations__title {
+  margin-bottom: 23px;
+}
+
+.diet-recommendations__text {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.diet-recommendations__preview {
+  margin-bottom: 43px;
+  font-size: 18px;
+  line-height: (30 / 18);
+}
+
+.diet-recommendations__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.diet-recommendations__item {
+  position: relative;
+  max-width: 425px;
+  margin-left: 72px;
+  margin-bottom: 33px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #5d6874;
+}
+
+.diet-recommendations__item:nth-last-of-type(-n + 2) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.diet-recommendations__icon,
+.male .diet-recommendations__icon {
+  position: absolute;
+  flex-shrink: 0;
+  fill: url("#man");
+
+  &--attention {
+    top: 6px;
+    left: -72px;
+    width: 54px;
+    height: 54px;
+    stroke: url("#man");
+  }
+
+  &--clock {
+    top: 6px;
+    left: -72px;
+    width: 54px;
+    height: 54px;
+  }
+
+  &--fingerprint {
+    top: 9px;
+    left: -74px;
+    width: 55px;
+    height: 59px;
+  }
+
+  &--arrows {
+    top: 16px;
+    left: -67px;
+    width: 49px;
+    height: 53px;
+  }
+
+  &--training {
+    top: 7px;
+    left: -76px;
+    width: 60px;
+    height: 35px;
+  }
+
+  &--drink {
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.female .diet-recommendations__icon {
+  fill: url("#woman");
+
+  &--attention{
+    stroke: url("#woman");
+  }
+}
+
+.diet-recommendations__description {
+  color: transparentize(white, 0.3);
+  font-size: 18px;
+  line-height: (28 / 18);
+}
+
+@include r(1230) {
+  .diet-recommendations__item {
+    max-width: 360px;
+  }
+}
+
+@include r(1070) {
+  .diet-recommendations__popup {
+    padding: 46px 35px 35px;
+  }
+
+  .diet-recommendations__target .center::after {
+    font-size: 30px;
+  }
+
+  .diet-recommendations__title {
+    margin-bottom: 16px;
+  }
+
+  .diet-recommendations__text {
+    font-size: 17px;
+    line-height: (28 / 17);
+    text-align: center;
+  }
+
+  .diet-recommendations__preview,
+  .diet-recommendations__description {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .diet-recommendations__preview {
+    margin-bottom: 21px;
+  }
+
+  .diet-recommendations__item,
+  .diet-recommendations__item:nth-last-of-type(-n + 2) {
+    max-width: 100%;
+    margin-bottom: 33px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid #5d6874;
+  }
+
+  .diet-recommendations__item:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+}
+
+@include r(767) {
+  .diet-recommendations__list {
+    display: block;
+    height: auto;
+  }
+
+  .diet-recommendations__item,
+  .diet-recommendations__item:nth-last-of-type(-n + 2) {
+    min-height: auto;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+  }
+
+  .diet-recommendations__icon {
+    position: static;
+    margin: 0 auto;
+
+    &--attention {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--clock {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--fingerprint {
+      width: 37px;
+      height: 40px;
+      margin-bottom: 4px;
+    }
+
+    &--arrows {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 2px;
+    }
+
+    &--training {
+      width: 50px;
+      height: 29px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+
+    &--drink {
+      width: 40px;
+      height: 40px;
+      margin-top: -3px;
+    }
+  }
+}
+
+@include r(479) {
+  .diet-recommendations__popup {
+    padding: 46px 15px 24px;
+  }
+}

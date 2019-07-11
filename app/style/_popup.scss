@@ -7,10 +7,31 @@
   border-radius: 5px;
 }
 
+.popup__target {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+
+  & .half {
+    width: 99px;
+    height: 99px;
+  }
+
+  & .center {
+    position: relative;
+    width: 83px;
+    height: 83px;
+  }
+}
+
 .popup__title {
   font-size: 40px;
   font-weight: 500;
   line-height: 1;
+  text-align: center;
 }
 
 .male .popup__subtitle,
@@ -108,6 +129,22 @@
   .popup {
     max-width: 550px;
     min-height: auto;
+  }
+
+  .popup__target {
+    width: 72px;
+    height: 72px;
+    top: -35px;
+  }
+
+  .popup__target .half {
+    width: 59px;
+    height: 59px;
+  }
+
+  .popup__target .center {
+    width: 49px;
+    height: 49px;
   }
 
   .popup__title {

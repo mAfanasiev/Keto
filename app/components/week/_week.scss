@@ -1,6 +1,3 @@
-.week {
-}
-
 .week__row {
   display: flex;
   align-items: center;
@@ -47,7 +44,7 @@
   align-items: center;
   flex-grow: 1;
   min-height: 40px;
-  padding-left: 21px;
+  padding: 0 21px;
   color: transparentize(white, 0.5);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -97,6 +94,7 @@
   transition: all 0.3s;
 }
 
+.week__meal-weight .arrow::before,
 .male .week__meal-weight .arrow::before {
   background-image:
     linear-gradient(to right, $boy-target-start, $boy-target-end);
@@ -130,5 +128,67 @@
 
   & .week__meal-weight .arrow::before {
     transform: translateX(0);
+  }
+}
+
+@include r(1070) {
+  .week__meal-time {
+    max-width: 200px;
+  }
+
+  .week__thumb {
+    width: 70px;
+    height: 60px;
+    margin-right: 8px;
+  }
+
+  .week__thumb img {
+    width: auto;
+    height: 100%;
+  }
+
+  .week__meal-time span {
+    font-size: 19px;
+    line-height: (20 / 19);
+  }
+}
+
+@include r(767) {
+  .week__row {
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+  }
+
+  .week__meal-time {
+    max-width: 100%;
+    margin-bottom: 9px;
+  }
+
+  .week__meal-item {
+    min-height: auto;
+    margin-bottom: 3px;
+    padding: 0;
+    border: none;
+  }
+
+  .week__meal-weight {
+    position: static;
+    text-align: left;
+  }
+
+  .week__meal-weight .arrow {
+    top: 10px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .week__meal-weight .arrow::after {
+    left: 9px;
+    width: 6px;
+    height: 10px;
   }
 }

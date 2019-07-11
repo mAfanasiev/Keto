@@ -1,7 +1,7 @@
 <section class="subscribe__content">
   <div class="subscribe__wrapper wrapper">
     <div class="subscribe__popup popup">
-      <div class="subscribe__target decorate-target">
+      <div class="subscribe__target popup__target decorate-target">
         <div class="half">
           <div class="center"></div>
         </div>
@@ -11,7 +11,7 @@
           <h2 class="subscribe__title popup__title">E-mail</h2>
           <p class="subscribe__subtitle popup__subtitle">Введите электронный адрес,<br>&nbsp;на который хотели бы&nbsp;получить свой план питания:</p>
         </div>
-        <form action="/" class="subscribe__form">
+        <form class="subscribe__form" onsubmit="return false;">
           <div class="subscribe__field popup__field popup__field--email">
             <input type="email" class="subscribe__input popup__input popup__input--email" placeholder="Email" required>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" class="icon icon--email icon-invalid">
