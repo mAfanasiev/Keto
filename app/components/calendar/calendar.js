@@ -3,14 +3,25 @@
 $(function () {
   var $weeks = $('.week');
   var $activeWeek = null;
+  var $nextWeekButton = $('.calendar__weeks-control.next');
+  var $prevWeekButton = $('.calendar__weeks-control.prev');
   var $dayButtons = $('.calendar__day-button');
 
+  var setWeekControlsState = function () {
+    var $nextWeek = $activeWeek.next();
+    var $prevWeek = $activeWeek.prev();
+
+    $nextWeekButton.attr('disabled', !$nextWeek.length);
+    $prevWeekButton.attr('disabled', !$prevWeek.length);
+  };
+  
   var setInitState = function () {
     $activeWeek =  $weeks.first().fadeIn().addClass('active');
     $activeWeek.siblings().hide();
     $weeks.each(function () {
       $(this).find('.week__day').first().addClass('active').siblings().hide();
     });
+    setWeekControlsState();
   }
   setInitState();
 
@@ -24,7 +35,7 @@ $(function () {
     $dayButtons.eq(activeDayIndex).addClass('active').siblings().removeClass('active');
   };
 
-  $('.calendar__weeks-control.next').click(function () {
+  $nextWeekButton.click(function () {
     var $nextWeek = $activeWeek.next();
     if ($nextWeek.length) {
       $nextWeek.fadeIn().addClass('active');
@@ -33,9 +44,10 @@ $(function () {
       setDayButton();
       setWeekCounter();
     }
+    setWeekControlsState();
   });
 
-  $('.calendar__weeks-control.prev').click(function () {
+  $prevWeekButton.click(function () {
     var $prevWeek = $activeWeek.prev();
     if ($prevWeek.length) {
       $prevWeek.fadeIn().addClass('active');
@@ -44,6 +56,7 @@ $(function () {
       setDayButton();
       setWeekCounter();
     }
+    setWeekControlsState();
   });
 
   $dayButtons.click(function () {

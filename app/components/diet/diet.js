@@ -1,3 +1,6 @@
 'use strict';
 
-$(function () {});
+$(function () {
+  // $('html').css('overflow', 'hidden');
+  $('.diet-modals').hide();
+});

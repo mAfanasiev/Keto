@@ -1,6 +1,7 @@
 .decorate-target,
 .male .decorate-target {
   display: flex;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-image:
     linear-gradient(to right, transparentize($boy-target-start, $target-inner-transparent), transparentize($boy-target-end, $target-inner-transparent));
   border-radius: 100%;

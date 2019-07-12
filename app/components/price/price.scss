@@ -152,3 +152,28 @@
     right: -8px;
   }
 }
+
+.price__current,
+.male .price__current {
+  color: $boy-target-start;
+}
+
+.female .price__current {
+  color: $girl-target-start;
+}
+
+@supports (-webkit-background-clip: text) {
+  .price__current .int,
+  .price__current .float,
+  .male .price__current .int,
+  .male .price__current .float {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $transparent;
+    background-image: linear-gradient(to right, $boy-target-start, $boy-target-end);
+  }
+
+  .female .price__current .int,
+  .female .price__current .float {
+    background-image: linear-gradient(to right, $girl-target-start, $girl-target-end);
+  }
+}

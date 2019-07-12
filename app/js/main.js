@@ -8,6 +8,7 @@
 //=include ../components/pay-form/pay-form.js
 //=include ../components/faq/faq.js
 //=include ../components/diet/diet.js
+//=include ../components/diet-modals/diet-modals.js
 //=include ../components/calendar/calendar.js
 //=include ../components/diet-recommendations/diet-recommendations.js
 //=include ../components/contacts/contacts.js

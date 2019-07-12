@@ -121,7 +121,8 @@
   z-index: 1;
   display: flex;
   max-width: 1030px;
-  margin: 0 auto 36px;
+  // margin: 0 auto 36px;
+  margin: 0 auto 90px;
   padding-bottom: 39px;
   padding-left: 4px;
   padding-right: 2px;
@@ -160,7 +161,8 @@
 
 .get__secured {
   max-width: 1030px;
-  margin: 0 auto 140px;
+  // margin: 0 auto 140px;
+  margin: 0 auto 90px;
 }
 
 .get__pay {
@@ -203,7 +205,7 @@
       left calc(50% + 274px) top 147px, // broccoli
       center center; // main background
     background-repeat: no-repeat, no-repeat, repeat;
-    background-size: 284px 306px, 97px 101px, cover;
+    background-size: 284px 306px, 97px 101px, auto;
   }
 
   .get .header {
