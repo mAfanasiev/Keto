@@ -157,6 +157,10 @@ $( document ).ready(function() {
     });
 
     $('.test__tabs-input').on('input', function () {
+
+        if($(this).val().length > 0) {
+            $(this).val(+$(this).val());
+        }
         if ($(this).val().length > $(this).attr('maxLength')) {
             $(this).val($(this).val().slice(0, $(this).attr('maxLength')));
         }
@@ -184,9 +188,14 @@ $( document ).ready(function() {
     $('.test__tabs-next').click(function () {
         var counter = 0;
         var parrent = $(this).parent().children('.test__tabs-field');
+        var children = parrent.children('.test__tabs-input');
 
         for (var i = 0; i < parrent.length; i++) {
-            if(!$(parrent.children('.test__tabs-input')[i]).val() || $(parrent.children('.test__tabs-input')[i]).val().length < $(parrent.children('.test__tabs-input')[i]).attr('minLength') ) {
+                console.log($(children[i]).val() >= $(children[i]).attr('max'), +$(children[i]).val())
+            if(!$(children[i]).val()
+                || ($(children[i]).val().length + 1) < $(children[i]).attr('minLength')
+                || +$(children[i]).val() <= $(children[i]).attr('min')
+                || +$(children[i]).val() >= $(children[i]).attr('max')) {
                 $(parrent[i]).addClass('error');
                 counter += 1;
             } else {
@@ -229,7 +238,7 @@ $( document ).ready(function() {
         quiz.hash = 'test1';
         quiz.animation = false;
         window.localStorage.setItem('quiz', JSON.stringify(quiz));
-        window.location.href += 'result.html';
+        window.location.href = 'result.html';
     }
 
     function startAnim () {
