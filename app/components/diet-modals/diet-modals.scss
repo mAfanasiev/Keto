@@ -201,19 +201,19 @@
   font-weight: 300;
   line-height: 30px;
 
-  & h3 {
+  & > h3 {
     margin-bottom: 11px;
     font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 500;
   }
 
-  & p {
+  & > p {
     margin-bottom: 19px;
     font-size: 18px;
   }
 
-  & strong {
+  & > strong {
     display: block;
     max-width: 550px;
     margin: 0 0 19px;
@@ -222,22 +222,22 @@
     font-weight: 500;
   }
 
-  & ul {
+  & > ul {
     margin-left: 21px;
     margin-bottom: 19px;
   }
 
-  & ul + h3 {
+  & > ul + h3 {
     margin-top: 30px;
   }
 
-  & li {
+  & > li {
     position: relative;
     padding-left: 26px;
     font-size: 17px;
   }
 
-  & li + li {
+  & > li + li {
     margin-top: 14px;
   }
 }
@@ -256,4 +256,74 @@
 
 .female .diet-modals__text li::before {
   background-image: linear-gradient(to right, $girl-target-start, $girl-target-end);
+}
+
+.diet-modals__shopping-list {
+  padding-top: 7px;
+}
+
+.diet-modals__shopping-item + .diet-modals__shopping-item {
+  margin-top: 18px;
+}
+
+.diet-modals__shopping-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.diet-modals__checkbox {
+  left: 11px;
+}
+
+.diet-modals__check {
+  display: block;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #545e6a;
+  border-radius: 4px;
+}
+
+.diet-modals__checkbox:checked + .diet-modals__check {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.diet-modals__checkbox:checked + .diet-modals__check,
+.male .diet-modals__checkbox:checked + .diet-modals__check {
+  background-image: 
+    url("../img/check.png"),
+    linear-gradient(
+      to right, $boy-target-start, $boy-target-end
+    );
+}
+
+.female .diet-modals__checkbox:checked + .diet-modals__check {
+  background-image:
+    url("../img/check.png"),
+    linear-gradient(
+      to right, $girl-target-start, $girl-target-end
+    );
+}
+
+.diet-modals__shopping-description {
+  margin-left: 19px;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.diet-modals__button {
+  margin: 0 auto;
+}
+
+.diet-modals__note {
+  color: #444444;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 20px;
+  text-align: center;
 }

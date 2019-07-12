@@ -83,14 +83,14 @@
     background-image: url("../img/main-button-arrow-02.svg");
   }
 
-  &--back {
+  &--border {
     padding-left: 100px;
     padding-right: 54px;
     line-height: 56px;
     background: none;
   }
 
-  &--back::before {
+  &--border::before {
     content: "";
     position: absolute;
     top: 0;
@@ -101,15 +101,25 @@
     border: 2px solid $boy-target-start;
   }
 
-  &--back::after {
+  &--border::after {
     top: calc(50% - 11px);
     left: 41px;
     right: auto;
     transform: scaleX(-1);
   }
 
-  &--back:hover::before {
+  &--border:hover::before {
     border-color: $transparent;
+  }
+
+  &--popup {
+    padding: 0;
+    color: black;
+    font-size: 20px;
+  }
+
+  &--popup svg {
+    fill: url("#man");
   }
 }
 
@@ -122,6 +132,10 @@
 
   &:hover {
     background-image: linear-gradient(to left, #f57351, #e42d46);
+  }
+
+  &--popup svg {
+    fill: url("#woman");
   }
 }
 
