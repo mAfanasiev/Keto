@@ -53,13 +53,16 @@
 }
 
 .animatable-element {
+  opacity: 0;
   animation: 9s blink linear infinite;
 }
 
 .proteins {
+  opacity: 0;
   animation-delay: 3s;
 }
 
 .fats {
+  opacity: 0;
   animation-delay: 6s;
 }
