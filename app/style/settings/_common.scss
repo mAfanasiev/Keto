@@ -33,7 +33,6 @@ body {
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
 	background-size: auto, auto, auto, auto, auto;
 	background-position: left calc(50% - 1050px) top -16px, right calc(50% - 995px) top -282px, right calc(50% - 930px) top 975px, right calc(50% + 37px) top -5px, center center;
-	background-attachment: scroll, scroll, scroll, scroll, fixed;
 
 	@include r(1920) {
 		background-image:  url('../img/Fish-img.png'), url('../img/paper-img.png'), url('../img/brokoli-img.png'), url('../img/circle__bg.png'), url('../img/pattern.jpg');
