@@ -30,6 +30,7 @@
   text-align: center;
   background-color: #545e6a;
   border-radius: 100%;
+  transition: all 0.3s;
 
   &--alert,
   &--info {
@@ -51,6 +52,10 @@
     background-position: left 16px top 11px;
     background-repeat: no-repeat;
     background-size: 19px 25px;
+  }
+
+  &:hover {
+    background-color: #6e7a88;
   }
 }
 
@@ -92,6 +97,14 @@
 
 .calendar__weeks-control:hover {
   opacity: 1;
+}
+
+.calendar__weeks-control:active {
+  opacity: 0.6;
+}
+
+.calendar__weeks-control:disabled {
+  opacity: 0.2;
 }
 
 .calendar__days-controls {

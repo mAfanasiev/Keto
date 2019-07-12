@@ -34,6 +34,10 @@
   background-color: #545e6a;
   cursor: pointer;
   transition: inherit;
+
+  &:hover {
+    background-color: #6e7a88;;
+  }
 }
 
 .result-card__about {
@@ -113,9 +117,10 @@
   line-height: 1;
 }
 
-.result-card--about {
+.result-card--about,
+.male .result-card--about {
   & .result-card__about-show {
-    background-color: #2ccda4;
+    background-image: linear-gradient(to right, $boy-target-start, $boy-target-end);
   }
 
   & .result-card__main {
@@ -125,6 +130,12 @@
   & .result-card__about {
     z-index: 1;
     opacity: 1;
+  }
+}
+
+.female .result-card--about {
+  & .result-card__about-show {
+    background-image: linear-gradient(to right, $girl-target-start, $girl-target-end);
   }
 }
 
